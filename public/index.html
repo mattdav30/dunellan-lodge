@@ -530,6 +530,11 @@ h1 em,h2 em{font-style:normal}
 .join-note{margin-top:1.25rem;color:var(--muted)}
 @media (max-width:860px){.jsteps{grid-template-columns:repeat(2,minmax(0,1fr))}.join2{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:480px){.jsteps{grid-template-columns:minmax(0,1fr)}}
+
+/* intro: why join sequence */
+.c-gain .yr{font-size:clamp(2.6rem,7.5vw,6rem);line-height:1.05}
+.c-gain .eras{height:clamp(14rem,36vh,19rem)}
+.c-end p{margin-inline:auto}
 </style>
 </head>
 <body>
@@ -564,9 +569,9 @@ h1 em,h2 em{font-style:normal}
 
       <div class="chapter c-title on" data-a="0" data-b="0.07" data-first data-name="Welcome">
         <div class="wrap">
-          <div class="eyebrow">Lodge No. 480 · Sinnamon Park</div>
+          <div class="eyebrow">Lodge No. 480 · Sinnamon Park, Brisbane</div>
           <h1>Dunellan <em>Lodge</em></h1>
-          <p class="lede">Making good men better since 1959.</p>
+          <p class="lede">Making good men better since 1959. Find out what Freemasonry offers and how to join.</p>
           <div class="ctas">
             <a class="btn" href="#join">Become a Freemason</a>
           </div>
@@ -577,44 +582,32 @@ h1 em,h2 em{font-style:normal}
         <div class="wrap"><div class="ch-box">
           <div class="bignum"><span data-scrollcount="6000000">0</span>+</div>
           <h2>Freemasons worldwide</h2>
-          <p>Men of every faith, background and walk of life, joined in one brotherhood.</p>
+          <p>Men of every faith, background and walk of life, joined in one brotherhood. Dunellan is your local lodge in Brisbane's west.</p>
         </div></div>
       </div>
 
-      <div class="chapter c-history" data-a="0.2" data-b="0.6" data-name="History">
+      <div class="chapter c-history c-seq c-gain" data-a="0.19" data-b="0.44" data-name="Why join">
         <div class="wrap hist">
           <div class="hist-main">
-            <span class="eyebrow">Our history</span>
+            <span class="eyebrow">Why men join</span>
             <div class="eras">
-              <div class="era"><span class="yr">Middle Ages</span><p>Stonemasons gather in guilds to share their craft, bound by oaths to uphold moral codes.</p></div>
-              <div class="era"><span class="yr">Late 1600s</span><p>As the stonemasons' guilds decline, speculative Freemasonry takes shape in Scotland, Ireland and England.</p></div>
-              <div class="era"><span class="yr">1717</span><p>Four London lodges form the first Grand Lodge on 24 June.</p></div>
-              <div class="era"><span class="yr">1730s</span><p>Freemasonry spreads through Europe and North America.</p></div>
-              <div class="era"><span class="yr">Early 1800s</span><p>Freemasonry reaches the Australian colonies.</p></div>
-              <div class="era"><span class="yr">1859</span><p>North Australian Lodge holds Queensland's first recorded Masonic meeting, in Albert Street, Brisbane, the year Queensland is founded.</p></div>
-              <div class="era"><span class="yr">1921</span><p>Queensland's lodges unite as the United Grand Lodge of Queensland.</p></div>
-              <div class="era"><span class="yr">1959</span><p>Dunellan Lodge No. 480 is consecrated on 29 September and holds its first meeting on 22 October.</p></div>
-              <div class="era"><span class="yr">2019</span><p>Dunellan celebrates sixty years of meetings.</p></div>
-              <div class="era"><span class="yr">Today</span><p>Dunellan meets at Sinnamon Park, with brethren from Brisbane to the Gold Coast, Canberra and Chile.</p></div>
+              <div class="era"><span class="yr">Friendship</span><p>Brothers from every background, there for you in good times and hard ones.</p></div>
+              <div class="era"><span class="yr">Personal growth</span><p>A steady path to become the best version of yourself.</p></div>
+              <div class="era"><span class="yr">Mentoring</span><p>Experienced brethren guide you at every step.</p></div>
+              <div class="era"><span class="yr">Leadership</span><p>Confidence and skills for work, family and community.</p></div>
+              <div class="era"><span class="yr">Giving back</span><p>Lodge fundraising for causes close to home.</p></div>
+              <div class="era"><span class="yr">A welcome anywhere</span><p>Visit lodges across Australia and around the world.</p></div>
             </div>
           </div>
           <ol class="rail" aria-hidden="true">
-            <li>Middle Ages</li><li>Late 1600s</li><li>1717</li><li>1730s</li><li>Early 1800s</li><li>1859</li><li>1921</li><li>1959</li><li>2019</li><li>Today</li>
+            <li>Friendship</li><li>Personal growth</li><li>Mentoring</li><li>Leadership</li><li>Giving back</li><li>A welcome anywhere</li>
           </ol>
         </div>
       </div>
 
-      <div class="chapter c-mid c-right" data-a="0.62" data-b="0.69" data-name="Why join">
+      <div class="chapter c-mid c-right" data-a="0.46" data-b="0.54" data-name="Values">
         <div class="wrap"><div class="ch-box">
-          <span class="eyebrow">What you gain</span>
-          <h2>Friendship, growth and purpose</h2>
-          <p>Mentoring from experienced brethren, skills in leadership, and a welcome at lodges across Australia and the world.</p>
-        </div></div>
-      </div>
-
-      <div class="chapter c-mid" data-a="0.71" data-b="0.77" data-name="Values">
-        <div class="wrap"><div class="ch-box">
-          <h2>Values for today</h2>
+          <h2>What we stand for</h2>
           <ul class="chips">
             <li>Fairness</li><li>Tolerance</li><li>Inclusiveness</li><li>Honesty</li><li>Giving to others</li>
           </ul>
@@ -622,7 +615,7 @@ h1 em,h2 em{font-style:normal}
         </div></div>
       </div>
 
-      <div class="chapter c-names" data-a="0.79" data-b="0.88" data-name="Famous brethren">
+      <div class="chapter c-names" data-a="0.56" data-b="0.66" data-name="Famous brethren">
         <div class="names-wrap">
           <div class="wrap"><h2>In good company</h2></div>
           <div class="mgroup">
@@ -636,10 +629,29 @@ h1 em,h2 em{font-style:normal}
         </div>
       </div>
 
-      <div class="chapter c-end" data-a="0.9" data-b="1" data-last data-name="Join us">
+      <div class="chapter c-history c-seq" data-a="0.68" data-b="0.84" data-name="History">
+        <div class="wrap hist">
+          <div class="hist-main">
+            <span class="eyebrow">Our history</span>
+            <div class="eras">
+              <div class="era"><span class="yr">Middle Ages</span><p>Stonemasons gather in guilds to share their craft, bound by oaths to uphold moral codes.</p></div>
+              <div class="era"><span class="yr">1717</span><p>Four London lodges form the first Grand Lodge.</p></div>
+              <div class="era"><span class="yr">1859</span><p>Queensland's first recorded Masonic meeting, in Albert Street, Brisbane.</p></div>
+              <div class="era"><span class="yr">1959</span><p>Dunellan Lodge No. 480 is consecrated on 29 September.</p></div>
+              <div class="era"><span class="yr">Today</span><p>Dunellan meets at Sinnamon Park, with brethren from Brisbane to the Gold Coast, Canberra and Chile.</p></div>
+            </div>
+          </div>
+          <ol class="rail" aria-hidden="true">
+            <li>Middle Ages</li><li>1717</li><li>1859</li><li>1959</li><li>Today</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="chapter c-end" data-a="0.87" data-b="1" data-last data-name="Join us">
         <div class="wrap">
           <h2>Your journey starts here</h2>
-          <div class="ctas" style="justify-content:center"><a class="btn" href="#join">Talk to us</a><a class="btn ghost" href="#start">Explore the lodge</a></div>
+          <p>Open to men over 18 of good character who believe in a Supreme Being, of any faith.</p>
+          <div class="ctas" style="justify-content:center"><a class="btn" href="#join">Start a conversation</a><a class="btn ghost" href="#start">Explore the lodge</a></div>
         </div>
       </div>
 
@@ -875,9 +887,7 @@ h1 em,h2 em{font-style:normal}
   const clamp = (v,a,b) => Math.min(b===undefined?1:b, Math.max(a||0, v));
   const ease = t => t<.5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2;
   const smooth = (a,b,v) => { const t = clamp((v-a)/(b-a)); return t*t*(3-2*t); };
-  const hist = document.querySelector(".c-history");
-  const eras = hist ? Array.from(hist.querySelectorAll(".era")) : [];
-  const railItems = hist ? Array.from(hist.querySelectorAll(".rail li")) : [];
+  const seqs = Array.from(document.querySelectorAll(".c-seq")).map(el => ({el, eras: Array.from(el.querySelectorAll(".era")), rail: Array.from(el.querySelectorAll(".rail li")), last: -1}));
   const mrows = Array.from(document.querySelectorAll(".mrow"));
   const jindex = document.querySelector(".jindex");
   const named = chapters.filter(c => c.dataset.name);
@@ -891,7 +901,6 @@ h1 em,h2 em{font-style:normal}
     });
     if(jindex) jindex.append(btn); return btn;
   });
-  let lastEra = -1;
 
   let target = 0, prog = 0;
   function readScroll(){
@@ -924,16 +933,16 @@ h1 em,h2 em{font-style:normal}
       const v = Math.round(+c.dataset.scrollcount * ease(smooth(a, a+(b-a)*.55, p)));
       if(c._v !== v){ c._v = v; c.textContent = v.toLocaleString("en-AU"); }
     });
-    if(hist){
-      const a = +hist.dataset.a, b = +hist.dataset.b;
+    seqs.forEach(q => {
+      const a = +q.el.dataset.a, b = +q.el.dataset.b;
       const t = clamp(((p-a)/(b-a) - .06) / .88);
-      const idx = Math.min(eras.length-1, Math.floor(t*eras.length));
-      if(idx !== lastEra){
-        lastEra = idx;
-        eras.forEach((e,i) => { e.classList.toggle("on", i===idx); e.classList.toggle("past", i<idx); });
-        railItems.forEach((r,i) => { r.classList.toggle("on", i===idx); r.classList.toggle("done", i<idx); });
+      const idx = Math.min(q.eras.length-1, Math.floor(t*q.eras.length));
+      if(idx !== q.last){
+        q.last = idx;
+        q.eras.forEach((e,i) => { e.classList.toggle("on", i===idx); e.classList.toggle("past", i<idx); });
+        q.rail.forEach((r,i) => { r.classList.toggle("on", i===idx); r.classList.toggle("done", i<idx); });
       }
-    }
+    });
     mrows.forEach(r => {
       const ch = r.closest(".chapter"), a = +ch.dataset.a, b = +ch.dataset.b;
       const t = clamp((p-a)/(b-a)), sp = r.firstElementChild;
