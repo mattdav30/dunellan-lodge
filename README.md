@@ -22,6 +22,9 @@ The deploy prints the web address, for example `https://dunellan-lodge.<your-sub
 
 ## Update it later
 
+Changes pushed to the main branch on GitHub publish automatically: Vercel rebuilds the pages and Cloudflare redeploys the Worker. The commands below are a manual fallback.
+
+
 - Website pages (public folder): `npx vercel deploy --prod`
 - API or database code (src folder, wrangler.toml): `npx wrangler deploy`
 - Not sure which changed? Run both.
