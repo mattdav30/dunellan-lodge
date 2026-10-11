@@ -1,0 +1,1363 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Dunellan Lodge No. 480, a Freemasons lodge meeting at Sinnamon Park in Brisbane's west since 1959. Find out how to join, meeting dates, lodge news and our charity work.">
+<meta property="og:title" content="Dunellan Lodge No. 480">
+<meta property="og:description" content="Making good men better since 1959. A Freemasons lodge at Sinnamon Park, Brisbane.">
+<style>
+:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;font:14px/1.5 system-ui,sans-serif}
+img{max-width:100%}
+[hidden]{display:none!important}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+footer a{color:inherit}
+</style>
+<title>Dunellan Lodge No. 480</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<style>
+/* Layout: walk into the lodge room. A 3D hero (pavement, pillars, square and compasses), then the lodge story, the three degrees, joining, news and newsletter. */
+:root{
+  --bg:#f5f6fa;
+  --surface:#ffffff;
+  --ink:#121829;
+  --muted:#4f586e;
+  --line:#d8dce7;
+  --lodge:#1b2c5e;
+  --lodge-ink:#eef1f8;
+  --brass:#a07a2a;
+  --brass-soft:#f0e7d2;
+  --night:#0a1128;
+  --night-2:#121c3f;
+  --night-ink:#eef1f8;
+  --gold:#d6b25e;
+  --ok:#2d6a45;
+  --warn:#8a5a14;
+  --f-display:"Gloock","Didot","Bodoni 72",Georgia,serif;
+  --f-caps:"Libre Franklin","Franklin Gothic Medium","Segoe UI",system-ui,sans-serif;
+  --f-body:"Libre Franklin","Franklin Gothic Book","Segoe UI",system-ui,sans-serif;
+  --f-mono:"Libre Franklin","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0d1120;--surface:#151b2e;--ink:#e8ebf3;--muted:#a4acc2;--line:#283050;
+  --lodge:#16245a;--lodge-ink:#eef1f8;--brass:#d6b25e;--brass-soft:#26221a;
+  --ok:#7cc59a;--warn:#e0b066;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d1120;--surface:#151b2e;--ink:#e8ebf3;--muted:#a4acc2;--line:#283050;
+  --lodge:#16245a;--lodge-ink:#eef1f8;--brass:#d6b25e;--brass-soft:#26221a;
+  --ok:#7cc59a;--warn:#e0b066;color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1.125rem;line-height:1.6}
+h1,h2,h3{font-family:var(--f-display);font-weight:500;line-height:1.12;text-wrap:balance;margin:0}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:70rem;margin:0 auto;padding-inline:clamp(1rem,4vw,2.5rem)}
+.label{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)}
+
+/* header */
+.top{position:fixed;left:0;right:0;top:0;z-index:20;padding-top:env(safe-area-inset-top,0px);color:var(--night-ink);transition:background .3s}
+.top.solid{background:color-mix(in srgb,var(--night) 92%,transparent);backdrop-filter:blur(8px)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.85rem;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:var(--f-display);font-size:1.05rem;letter-spacing:.04em}
+.brand svg{width:28px;height:28px;flex:none}
+.nav{display:flex;gap:1.3rem;flex-wrap:wrap;font-size:.95rem}
+.nav a{text-decoration:none;opacity:.82}
+.nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px;text-decoration-color:var(--gold)}
+
+/* hero */
+.hero{position:relative;background:var(--night);color:var(--night-ink);min-height:clamp(36rem,88vh,52rem);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+#scene{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(to top,var(--night) 0%,color-mix(in srgb,var(--night) 70%,transparent) 28%,transparent 60%),
+             radial-gradient(ellipse at 20% 80%,color-mix(in srgb,var(--night) 60%,transparent),transparent 60%)}
+.hero .wrap{width:100%;padding-block:7rem clamp(2.5rem,6vw,4.5rem)}
+.hero .eyebrow{font-family:var(--f-mono);font-size:clamp(.78rem,1.4vw,.9rem);letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-size:clamp(2.6rem,7.5vw,5.6rem);font-weight:500;letter-spacing:.03em;margin-top:.8rem;text-shadow:0 2px 30px rgba(0,0,0,.5)}
+.hero p.lede{margin-top:1rem;max-width:33rem;font-size:clamp(1.1rem,1.8vw,1.3rem);opacity:.92}
+.ctas{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.75rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;font:inherit;font-size:1rem;font-weight:500;padding:.75rem 1.3rem;border-radius:2px;border:1px solid var(--gold);background:var(--gold);color:#10162a;cursor:pointer;text-decoration:none;transition:transform .2s,filter .2s}
+.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:inherit}
+.btn.small{padding:.4rem .8rem;font-size:.9rem}
+.light .btn{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+.light .btn.ghost{background:transparent;color:var(--ink)}
+.scrollcue{position:absolute;right:clamp(1rem,4vw,2.5rem);bottom:2rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;opacity:.7;writing-mode:vertical-rl}
+
+/* scroll journey */
+.journey{position:relative;height:420vh;background:var(--night);color:var(--night-ink)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;isolation:isolate}
+.vignette{position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(to top,color-mix(in srgb,var(--night) 85%,transparent) 0%,transparent 45%),
+             radial-gradient(ellipse at 50% 45%,transparent 40%,color-mix(in srgb,var(--night) 75%,transparent) 100%)}
+.chapter{position:absolute;inset:0;display:flex;opacity:0;pointer-events:none;will-change:opacity,transform}
+.chapter[data-first]{opacity:1}
+.chapter.on{pointer-events:auto}
+.chapter .wrap{width:100%}
+.chapter .eyebrow{font-family:var(--f-mono);font-size:clamp(.78rem,1.4vw,.9rem);letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.c-title{align-items:flex-end;padding-bottom:clamp(2.5rem,9vh,5.5rem);transform-origin:40% 75%}
+.c-title h1{font-size:clamp(2.8rem,8vw,6rem);letter-spacing:.03em;margin-top:.8rem;text-shadow:0 2px 30px rgba(0,0,0,.55)}
+.c-title .lede{margin-top:1rem;max-width:33rem;font-size:clamp(1.1rem,1.8vw,1.3rem);opacity:.92}
+.c-mid{align-items:center}
+.ch-box{max-width:30rem;display:grid;gap:.8rem;text-shadow:0 2px 24px rgba(0,0,0,.7)}
+.c-right .ch-box{margin-left:auto;text-align:right}
+.ch-box h2,.c-end h2{font-size:clamp(2rem,5.5vw,3.8rem)}
+.ch-box p{font-size:clamp(1.05rem,1.7vw,1.25rem);opacity:.9}
+.c-end{align-items:flex-end;padding-bottom:clamp(3rem,10vh,6rem);text-align:center}
+.c-end .wrap{display:grid;gap:.8rem;justify-items:center;text-shadow:0 2px 24px rgba(0,0,0,.7)}
+.c-end p{max-width:30rem;font-size:clamp(1.05rem,1.7vw,1.25rem);opacity:.9}
+.jprogress{position:absolute;right:clamp(.8rem,2.5vw,1.8rem);top:35%;height:30%;width:2px;background:color-mix(in srgb,var(--night-ink) 18%,transparent)}
+.jprogress i{position:absolute;inset:0;background:var(--gold);transform:scaleY(0);transform-origin:top}
+.stage .scrollcue{bottom:2rem;right:clamp(.6rem,2.3vw,1.6rem)}
+.journey{height:620vh}
+.bignum{font-family:var(--f-display);font-size:clamp(3rem,10vw,6.5rem);line-height:1;color:var(--gold);font-variant-numeric:tabular-nums;letter-spacing:.01em}
+.timeline{list-style:none;margin:.4rem 0 0;padding:0;display:grid;gap:.7rem;border-right:1px solid color-mix(in srgb,var(--gold) 50%,transparent);padding-right:1.1rem}
+.timeline li{display:grid;gap:.05rem;position:relative}
+.timeline li::after{content:"";position:absolute;right:calc(-1.1rem - 5px);top:.45rem;width:9px;height:9px;background:var(--gold);transform:rotate(45deg)}
+.timeline b{font-family:var(--f-mono);font-size:.85rem;letter-spacing:.08em;color:var(--gold);font-weight:500}
+.timeline span{font-size:1rem;opacity:.9}
+.chips{list-style:none;margin:.3rem 0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+.chips li{font-size:.95rem;padding:.35rem .85rem;border:1px solid color-mix(in srgb,var(--gold) 60%,transparent);border-radius:999px;background:color-mix(in srgb,var(--night) 55%,transparent);backdrop-filter:blur(4px)}
+.ch-box .names{font-size:1rem;opacity:.75;font-style:italic}
+@media (max-width:640px){
+  .journey{height:520vh}
+  .c-right .ch-box{text-align:left;margin-left:0}
+  .timeline{border-right:0;border-left:1px solid color-mix(in srgb,var(--gold) 50%,transparent);padding-right:0;padding-left:1.1rem}
+  .timeline li::after{right:auto;left:calc(-1.1rem - 5px)}
+  .ch-box{background:color-mix(in srgb,var(--night) 55%,transparent);padding:1rem;border-radius:3px}
+}
+@media (prefers-reduced-motion:reduce){.journey{height:auto}}
+@media (prefers-reduced-motion:reduce){
+  .journey{height:auto}.stage{position:relative;height:clamp(36rem,88vh,52rem)}
+  .chapter:not([data-first]),.jprogress,.stage .scrollcue{display:none}
+}
+
+/* stat strip */
+.stats{background:var(--night-2);color:var(--night-ink);border-top:1px solid color-mix(in srgb,var(--gold) 35%,transparent)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;padding-block:1.75rem}
+.stats div{display:grid;gap:.2rem}
+.stats b{font-family:var(--f-display);font-weight:500;font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--gold);font-variant-numeric:tabular-nums}
+.stats span{font-size:.92rem;opacity:.8}
+
+section{padding-block:clamp(3.5rem,8vw,6rem)}
+.sec-head{display:grid;gap:.6rem;margin-bottom:2.5rem;max-width:42rem}
+.sec-head h2{font-size:clamp(1.9rem,4.2vw,2.9rem)}
+.sec-head p{color:var(--muted)}
+.light + .light{border-top:1px solid var(--line)}
+
+/* reveal: visible at rest, slides in when the observer runs */
+.rv{transition:transform .8s cubic-bezier(.2,.7,.2,1),opacity .8s}
+.rv.pre{transform:translateY(24px);opacity:.35}
+
+/* belong */
+.belong{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}
+.belong article{border-top:2px solid var(--brass);padding-top:1.25rem}
+.belong .num{font-family:var(--f-mono);font-size:.8rem;color:var(--brass);letter-spacing:.1em}
+.belong h3{font-size:1.45rem;margin:.4rem 0 .6rem}
+.belong p{color:var(--muted)}
+
+/* degrees: 3D tilt cards */
+.degrees-sec{background:var(--night);color:var(--night-ink);position:relative;overflow:hidden}
+.degrees-sec .sec-head p{color:var(--night-ink);opacity:.8}
+.degrees-sec .label{color:var(--gold)}
+.degrees{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;perspective:1100px}
+.deg{position:relative;padding:2rem 1.6rem 1.8rem;border:1px solid color-mix(in srgb,var(--gold) 40%,transparent);border-radius:3px;
+  background:linear-gradient(160deg,color-mix(in srgb,var(--night-2) 100%,transparent),var(--night));
+  transform-style:preserve-3d;transition:transform .25s ease-out,box-shadow .25s;min-width:0}
+.deg:hover{box-shadow:0 30px 60px -20px rgba(0,0,0,.6),0 0 0 1px var(--gold)}
+.deg .roman{font-family:var(--f-display);font-size:4rem;line-height:1;color:var(--gold);transform:translateZ(40px);display:block;opacity:.9}
+.deg h3{font-size:1.5rem;margin:1rem 0 .6rem;transform:translateZ(28px)}
+.deg p{opacity:.82;transform:translateZ(16px)}
+.deg .tool{position:absolute;right:1.2rem;top:1.4rem;width:46px;height:46px;transform:translateZ(50px);color:var(--gold);opacity:.8}
+
+/* about */
+.about{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem 3rem}
+.about h3{font-size:1.3rem;margin-bottom:.6rem}
+.about p{color:var(--muted)}
+.about p+p{margin-top:.75rem}
+
+/* join */
+.join{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,4rem)}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:1.4rem;counter-reset:s}
+.steps li{display:grid;grid-template-columns:2.6rem minmax(0,1fr);gap:1rem;counter-increment:s}
+.steps li::before{content:counter(s);font-family:var(--f-display);font-size:1.3rem;width:2.6rem;height:2.6rem;display:grid;place-items:center;border:1px solid var(--brass);color:var(--brass);transform:rotate(45deg)}
+.steps b{display:block;font-weight:700}
+.steps span{color:var(--muted)}
+.req{margin-top:2rem;padding:1.25rem 1.5rem;background:var(--brass-soft);border-radius:2px}
+.req ul{margin:.5rem 0 0;padding-left:1.2rem}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:clamp(1.25rem,3vw,2rem);min-width:0}
+.card h3{font-size:1.5rem;margin-bottom:.4rem}
+.card > p{color:var(--muted);margin-bottom:1.25rem}
+form{display:grid;gap:.9rem}
+.field{display:grid;gap:.3rem}
+.field label{font-size:.9rem;font-weight:500}
+input,textarea,select{font:inherit;font-size:1rem;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:2px;padding:.6rem .7rem;width:100%}
+textarea{min-height:7rem;resize:vertical}
+.row2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,12rem),1fr));gap:.9rem}
+.status{font-size:.95rem}
+.status.ok{color:var(--ok)}
+.status.warn{color:var(--warn)}
+.fallback{font-size:.95rem;color:var(--muted);border-top:1px solid var(--line);padding-top:1rem}
+.copyline{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;font-family:var(--f-mono);font-size:.95rem;color:var(--ink);margin-top:.4rem}
+
+/* events */
+.events{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.events div{background:var(--surface);padding:1.4rem;transition:background .2s}
+.events div:hover{background:var(--brass-soft)}
+.events b{font-family:var(--f-display);font-weight:500;font-size:1.2rem;display:block;margin-bottom:.3rem}
+.events span{color:var(--muted);font-size:.95rem}
+
+/* news */
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.tab{font:inherit;font-size:.95rem;padding:.35rem .9rem;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--lodge);border-color:var(--lodge);color:var(--lodge-ink)}
+.post{display:grid;grid-template-columns:8.5rem minmax(0,1fr);gap:1.5rem;padding-block:1.6rem;border-top:1px solid var(--line)}
+.post:last-child{border-bottom:1px solid var(--line)}
+.post time{font-family:var(--f-mono);font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.post .kind{display:inline-block;margin-top:.4rem;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;padding:.15rem .5rem;border:1px solid var(--brass);color:var(--brass);border-radius:2px}
+.post h3{font-size:1.45rem;margin-bottom:.5rem}
+.post .body p{color:var(--muted);max-width:42rem}
+.post .body p+p{margin-top:.6rem}
+.post .del{margin-top:.75rem}
+.empty{padding:2rem;border:1px dashed var(--line);border-radius:3px;color:var(--muted);text-align:center}
+
+/* newsletter band */
+.band{background:var(--lodge);color:var(--lodge-ink);position:relative;overflow:hidden}
+.band::before{content:"";position:absolute;inset:auto -10% -40% auto;width:min(60vw,36rem);aspect-ratio:1;max-width:100%;
+  background:repeating-conic-gradient(color-mix(in srgb,var(--lodge-ink) 7%,transparent) 0 25%,transparent 0 50%) 0 0/60px 60px;
+  transform:perspective(600px) rotateX(55deg) rotateZ(45deg);pointer-events:none}
+.band .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2rem;align-items:center;position:relative}
+.band h2{font-size:clamp(1.8rem,3.6vw,2.5rem)}
+.band p{opacity:.9;margin-top:.5rem}
+.band .label{color:var(--gold)}
+.band input{background:color-mix(in srgb,var(--lodge-ink) 8%,transparent);color:var(--lodge-ink);border-color:color-mix(in srgb,var(--lodge-ink) 30%,transparent)}
+.band .fallback{color:var(--lodge-ink);opacity:.85;border-color:color-mix(in srgb,var(--lodge-ink) 25%,transparent)}
+.band .copyline{color:var(--lodge-ink)}
+.band .status.ok{color:#9fe0b8}
+.band .status.warn{color:#f3cc85}
+
+/* contact */
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:2rem}
+.contact dt{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)}
+.contact dd{margin:.3rem 0 0}
+
+/* admin */
+.admin{background:var(--brass-soft)}
+.admin .grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:2rem}
+.list{display:grid;gap:.5rem;max-height:22rem;overflow:auto}
+.list div{background:var(--surface);border:1px solid var(--line);border-radius:2px;padding:.6rem .8rem;font-size:.95rem;min-width:0;overflow-wrap:anywhere}
+.list small{color:var(--muted);display:block}
+
+footer{background:var(--night);color:var(--night-ink);padding-block:2.5rem;font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;opacity:.8}
+
+@media (max-width:860px){
+  .belong,.degrees,.about{grid-template-columns:minmax(0,1fr)}
+  .events{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .join,.band .wrap,.admin .grid{grid-template-columns:minmax(0,1fr)}
+  .stats .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .post{grid-template-columns:minmax(0,1fr);gap:.5rem}
+  .scrollcue{display:none}
+}
+@media (max-width:520px){
+  .events{grid-template-columns:minmax(0,1fr)}
+  .nav{gap:.8rem;font-size:.88rem}
+}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+@media (prefers-reduced-motion:reduce){.rv,.deg,.btn{transition:none}.rv.pre{transform:none;opacity:1}}
+
+/* type: 17th century Fell types for headings and labels, a plain civic sans for reading */
+body{font-size:1.0625rem;line-height:1.65}
+h1,h2,h3{font-weight:400;letter-spacing:0}
+.c-title h1{font-size:clamp(3rem,9vw,6.8rem);letter-spacing:-.01em;line-height:.95}
+.c-title h1 em,.sec-head h2 em{font-style:italic;color:var(--gold)}
+.sec-head h2 em{color:var(--brass)}
+.label,.eyebrow,.chapter .eyebrow,.belong .num,.timeline b,.post .kind,.contact dt,.facts dt,.req .label{
+  font-family:var(--f-caps);text-transform:none;letter-spacing:.02em;font-size:1.1rem;font-weight:400}
+.chapter .eyebrow{font-size:clamp(1.05rem,1.8vw,1.25rem)}
+.timeline b{font-size:1.05rem}
+.post .kind{border:0;padding:0;font-size:1rem}
+.post time,.copyline,.scrollcue{font-family:var(--f-body)}
+.scrollcue{text-transform:lowercase;letter-spacing:.08em}
+.stats b,.bignum{font-family:var(--f-display);font-variant-numeric:lining-nums tabular-nums}
+.deg .roman{font-family:var(--f-display);font-style:italic}
+.steps li::before{font-family:var(--f-display);transform:none;border-radius:0}
+.btn{border-radius:0;font-weight:500;letter-spacing:.01em}
+.chips{gap:0}
+.chips li{border:0;background:none;backdrop-filter:none;padding:0;border-radius:0;font-family:var(--f-display);font-size:1.3rem}
+.chips li:not(:last-child)::after{content:"·";margin:0 .55rem;color:var(--gold)}
+
+/* printed document treatment: rules and type in place of boxes */
+.sec-head .label{display:none}
+.req{margin-top:2.75rem;padding:0;background:none;border-radius:0;border-top:1px solid var(--ink)}
+.req h3{font-size:1.15rem;font-family:var(--f-caps);margin:.8rem 0 .3rem;color:var(--muted)}
+.req ol{list-style:none;margin:0;padding:0}
+.req li{font-family:var(--f-display);font-size:clamp(1.3rem,2.4vw,1.6rem);line-height:1.3;padding:.55rem 0;border-bottom:1px solid var(--line)}
+.petition{border-top:1px solid var(--ink);padding-top:.8rem;min-width:0}
+.petition h3{font-size:clamp(1.6rem,3vw,2rem);margin-bottom:.3rem}
+.petition > p{color:var(--muted);margin-bottom:1.5rem}
+.petition form{gap:1.4rem}
+.petition .field label{font-family:var(--f-caps);font-weight:400;font-size:1.05rem;color:var(--muted)}
+.petition input,.petition textarea{background:transparent;border:0;border-bottom:1px solid color-mix(in srgb,var(--ink) 40%,transparent);border-radius:0;padding:.35rem 0;font-size:1.05rem}
+.petition textarea{min-height:5.5rem}
+.petition input:focus,.petition textarea:focus{outline:none;border-bottom-color:var(--brass);box-shadow:0 1px 0 var(--brass)}
+.petition .btn{justify-self:start;padding:.75rem 1.6rem}
+.calendar{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.calendar li{display:grid;grid-template-columns:minmax(0,17rem) minmax(0,1fr);gap:.4rem 2.5rem;align-items:baseline;padding:1.15rem 0;border-bottom:1px solid var(--line)}
+.calendar h3{font-size:clamp(1.5rem,2.6vw,1.9rem)}
+.calendar p{color:var(--muted);max-width:36rem}
+@media (max-width:640px){.calendar li{grid-template-columns:minmax(0,1fr)}}
+.steps{gap:.9rem}.steps li{align-items:center}.steps b{font-weight:500;font-size:1.1rem}
+.meets li{grid-template-columns:minmax(0,17rem) minmax(0,1fr) auto}
+.next{display:grid;justify-items:end;text-align:right}
+.next small{font-family:var(--f-caps);font-size:1rem;color:var(--muted)}
+.next b{font-family:var(--f-display);font-weight:400;font-size:clamp(1.4rem,2.4vw,1.8rem);color:var(--brass);white-space:nowrap}
+.socials{margin-top:1.5rem;color:var(--muted)}
+.socials span{font-family:var(--f-caps);color:var(--ink);margin-right:.6rem}
+.charity{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(2rem,6vw,5rem);align-items:start}
+.charity h2{font-size:clamp(1.9rem,4.2vw,2.9rem);margin-bottom:1rem}
+.charity-lede{font-size:clamp(1.1rem,1.8vw,1.3rem);max-width:32rem;margin-bottom:1.5rem}
+.charity .note{margin-top:.7rem;color:var(--muted);font-size:.95rem}
+.causes{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.causes li{font-family:var(--f-display);font-size:clamp(1.35rem,2.5vw,1.75rem);padding:.45rem 0;border-bottom:1px solid var(--line)}
+.charity-feed{margin-top:3rem}
+.charity-feed h3{font-family:var(--f-caps);font-size:1.15rem;color:var(--muted);margin-bottom:.6rem}
+.crow{display:grid;grid-template-columns:8rem minmax(0,1fr);gap:1rem;padding:.6rem 0;border-top:1px solid var(--line);text-decoration:none}
+.crow time{color:var(--muted);font-variant-numeric:tabular-nums}
+.crow span{font-family:var(--f-display);font-size:1.25rem}
+.crow:hover span{color:var(--brass)}
+.empty-line{color:var(--muted)}
+@media (max-width:760px){.charity{grid-template-columns:minmax(0,1fr)}.meets li{grid-template-columns:minmax(0,1fr)}.next{justify-items:start;text-align:left}}
+
+/* accessibility and flow pass: larger type, stronger contrast, bigger targets */
+:root{--muted:#3d4558}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--muted:#c0c6d6}}
+:root[data-theme="dark"]{--muted:#c0c6d6}
+body{font-size:1.1875rem;line-height:1.7}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.skiplink{position:absolute;left:1rem;top:-4rem;z-index:50;background:var(--gold);color:#10162a;padding:.7rem 1rem;font-weight:700}
+.skiplink:focus{top:calc(env(safe-area-inset-top,0px) + .5rem)}
+.nav{font-size:1.05rem;gap:1.4rem}
+.nav a{opacity:1}
+.btn{min-height:3rem;font-size:1.1rem;padding:.8rem 1.5rem}
+.btn.small{min-height:2.5rem;font-size:1rem}
+.tab{font-size:1.05rem;padding:.55rem 1.1rem;min-height:2.75rem}
+.journey{height:480vh}
+@media (max-width:640px){.journey{height:400vh}}
+@media (prefers-reduced-motion:reduce){.journey{height:auto}}
+.skipintro{position:absolute;left:clamp(1rem,4vw,2.5rem);top:calc(env(safe-area-inset-top,0px) + 5rem);color:var(--night-ink);font-size:1rem;background:color-mix(in srgb,var(--night) 70%,transparent);border:1px solid color-mix(in srgb,var(--night-ink) 40%,transparent);padding:.5rem .9rem;text-decoration:none}
+.skipintro:hover{border-color:var(--gold)}
+.start{padding-block:clamp(3rem,7vw,5rem)}
+.start h2{font-size:clamp(2rem,4.5vw,3rem)}
+.intro{margin-top:.8rem;max-width:40rem;font-size:1.25rem;color:var(--muted)}
+.paths{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:2rem}
+.path{display:grid;gap:.3rem;padding:1.4rem 1.5rem;border:2px solid var(--ink);text-decoration:none;min-width:0;transition:background .15s,color .15s}
+.path b{font-family:var(--f-display);font-weight:400;font-size:clamp(1.4rem,2.4vw,1.7rem);line-height:1.2}
+.path span{color:var(--muted)}
+.path:hover{background:var(--ink);color:var(--bg)}
+.path:hover span{color:var(--bg)}
+.path b::after{content:" \2192"}
+.reasons{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:3rem;border-top:1px solid var(--ink)}
+.reasons li{padding:1rem 0;border-bottom:1px solid var(--line);min-width:0}
+.reasons h3{font-size:clamp(1.5rem,2.6vw,1.8rem)}
+.reasons p{color:var(--muted)}
+.steps{gap:1.3rem}
+.steps li{align-items:start}
+.steps b{font-size:1.25rem;font-weight:700}
+.steps span{display:block;color:var(--muted)}
+.commit{margin-top:2rem;border-top:1px solid var(--ink);padding-top:.8rem}
+.commit h3{font-family:var(--f-caps);font-size:1.15rem;color:var(--muted);margin-bottom:.3rem}
+.petition .field label,.pref legend{font-size:1.15rem;color:var(--ink)}
+.petition input,.petition textarea{font-size:1.15rem;padding:.5rem 0}
+.pref{border:0;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;align-items:center}
+.pref legend{font-family:var(--f-caps);padding:0;margin-bottom:.3rem;width:100%}
+.pref label{display:flex;align-items:center;gap:.5rem;font-family:var(--f-body)!important;color:var(--ink)!important;cursor:pointer}
+.pref input{width:1.4rem;height:1.4rem;accent-color:var(--brass)}
+.charity{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.charity-feed{margin-top:0}
+.crow{display:grid;gap:.2rem;padding:1rem 0;border-top:1px solid var(--line);grid-template-columns:none}
+.crow h4{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.45rem;line-height:1.25}
+.crow p{color:var(--muted)}
+.empty-line{border-top:1px solid var(--ink);padding-top:1rem}
+.post h3{font-size:1.6rem}
+@media (max-width:860px){.paths,.reasons{grid-template-columns:minmax(0,1fr)}}
+
+/* intro: history, names, chapter index */
+.journey{height:900vh}
+@media (max-width:640px){.journey{height:760vh}}
+@media (prefers-reduced-motion:reduce){.journey{height:auto}}
+.c-history{align-items:center}
+.hist{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3rem;align-items:center}
+.hist-main{min-width:0;text-shadow:0 2px 24px rgba(0,0,0,.75)}
+.eras{position:relative;height:clamp(16rem,42vh,21rem);margin-top:.6rem}
+.era{position:absolute;left:0;top:0;max-width:38rem;opacity:0;transform:translateY(40px);transition:opacity .9s,transform 1s cubic-bezier(.2,.7,.2,1)}
+.era.on{opacity:1;transform:none}
+.era.past{transform:translateY(-40px)}
+.yr{display:block;font-family:var(--f-display);font-size:clamp(3.4rem,11vw,8.5rem);line-height:1;color:var(--gold)}
+.era p{font-size:clamp(1.2rem,2vw,1.5rem);margin-top:.9rem;max-width:32rem}
+.rail{list-style:none;margin:0;padding:0 0 0 1.3rem;border-left:1px solid color-mix(in srgb,var(--gold) 45%,transparent);display:grid;gap:.4rem;font-size:1.05rem;color:var(--night-ink)}
+.rail li{opacity:.45;position:relative;transition:opacity .3s,color .3s}
+.rail li::before{content:"";position:absolute;left:calc(-1.3rem - 4px);top:.6em;width:7px;height:7px;background:var(--night-ink);transform:rotate(45deg);opacity:.5}
+.rail li.done{opacity:.8}
+.rail li.on{opacity:1;color:var(--gold)}
+.rail li.on::before{background:var(--gold);opacity:1}
+.c-names{align-items:center}
+.names-wrap{width:100%;display:grid;gap:1.5rem;text-shadow:0 2px 24px rgba(0,0,0,.75)}
+.names-wrap h2{font-size:clamp(2rem,5.5vw,3.8rem)}
+.mgroup{display:grid;gap:.2rem}
+.mlabel{display:block;font-family:var(--f-caps);font-size:1.15rem;color:var(--gold)}
+.mrow{overflow:hidden;white-space:nowrap;padding-inline:clamp(1rem,4vw,2.5rem)}
+.mrow span{display:inline-block;font-family:var(--f-display);font-size:clamp(2.2rem,6.5vw,5rem);line-height:1.2;will-change:transform}
+.mrow.alt span{font-style:italic;color:var(--gold)}
+.jindex{position:absolute;right:1.5rem;top:50%;transform:translateY(-50%);display:grid;justify-items:end;gap:.15rem;padding-right:1rem}
+.jline{position:absolute;right:0;top:.4rem;bottom:.4rem;width:2px;background:color-mix(in srgb,var(--night-ink) 20%,transparent)}
+#jbar{position:absolute;inset:0;background:var(--gold);transform:scaleY(0);transform-origin:top}
+.jindex button{font:inherit;font-size:1rem;background:none;border:0;color:var(--night-ink);opacity:.6;cursor:pointer;padding:.3rem .2rem;text-align:right}
+.jindex button:hover,.jindex button:focus-visible{opacity:1}
+.jindex button.on{opacity:1;color:var(--gold)}
+@media (max-width:1180px){.jindex{display:none}}
+@media (max-width:860px){.hist{grid-template-columns:minmax(0,1fr)}.rail{display:none}}
+.history-note{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.5rem 2rem;border-top:1px solid var(--ink);padding-top:1rem}
+.history-note span{font-family:var(--f-display);font-size:1.3rem}
+.subhead{font-family:var(--f-caps);font-size:1.3rem;font-weight:400;color:var(--muted);margin:2.5rem 0 .6rem}
+
+/* legibility pass */
+.journey{height:1000vh}
+@media (max-width:640px){.journey{height:840vh}}
+@media (prefers-reduced-motion:reduce){.journey{height:auto}}
+.yr.long{font-size:clamp(2.6rem,7vw,5.6rem)}
+.ch-box,.hist-main{background:color-mix(in srgb,var(--night) 80%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);padding:clamp(1.2rem,3vw,2rem);border-left:3px solid var(--gold);text-shadow:none}
+.c-right .ch-box{border-left:0;border-right:3px solid var(--gold)}
+.hist-main{max-width:44rem}
+.c-end .wrap{width:auto;max-width:40rem;margin-inline:auto;background:color-mix(in srgb,var(--night) 80%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);padding:clamp(1.4rem,3vw,2.2rem);border-top:3px solid var(--gold);text-shadow:none}
+.ch-box p,.era p,.c-end p,.c-title .lede{opacity:1;color:var(--night-ink)}
+.c-title{background:radial-gradient(ellipse 70% 60% at 15% 90%,color-mix(in srgb,var(--night) 88%,transparent),transparent 70%)}
+.names-wrap{background:linear-gradient(to bottom,transparent,color-mix(in srgb,var(--night) 85%,transparent) 10%,color-mix(in srgb,var(--night) 85%,transparent) 90%,transparent);padding-block:3rem;text-shadow:none}
+.rail{background:color-mix(in srgb,var(--night) 70%,transparent);padding:1rem 1rem 1rem 1.6rem}
+.rail li::before{left:calc(-1.6rem - 4px)}
+.more{margin-top:1.2rem;font-size:1.2rem}
+
+/* cinematic captions: shade the scene behind text, no boxes; new type */
+.ch-box,.hist-main,.c-end .wrap{background:none;-webkit-backdrop-filter:none;backdrop-filter:none;border:0;padding:0;
+  text-shadow:0 1px 2px rgba(0,0,0,.9),0 0 30px rgba(0,0,0,.85)}
+.c-right .ch-box{border:0}
+.c-end .wrap{border-top:0}
+.rail{background:none;padding:0 0 0 1.3rem}
+.rail li::before{left:calc(-1.3rem - 4px)}
+.names-wrap{background:none}
+.chapter::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1}
+.c-mid::before,.c-history::before{background:linear-gradient(90deg,rgba(6,10,26,.9) 0%,rgba(6,10,26,.72) 38%,rgba(6,10,26,0) 70%)}
+.c-mid.c-right::before{background:linear-gradient(270deg,rgba(6,10,26,.9) 0%,rgba(6,10,26,.72) 38%,rgba(6,10,26,0) 70%)}
+.c-history::before{background:linear-gradient(90deg,rgba(6,10,26,.9) 0%,rgba(6,10,26,.75) 50%,rgba(6,10,26,.55) 100%)}
+.c-names::before{background:rgba(6,10,26,.62)}
+.c-end::before{background:linear-gradient(0deg,rgba(6,10,26,.92) 0%,rgba(6,10,26,.6) 40%,rgba(6,10,26,0) 65%)}
+.c-title::before{background:linear-gradient(0deg,rgba(6,10,26,.85) 0%,rgba(6,10,26,.4) 40%,rgba(6,10,26,0) 65%)}
+@media (max-width:640px){.c-mid::before,.c-mid.c-right::before,.c-history::before{background:rgba(6,10,26,.72)}}
+h1,h2,h3,.yr,.bignum,.mrow span,.chips li,.history-note span,.steps li::before,.deg .roman{font-family:var(--f-display);font-weight:400}
+h1 em,h2 em{font-style:normal}
+.deg .roman,.mrow.alt span{font-style:normal}
+.c-title h1{letter-spacing:-.015em;line-height:1}
+.yr{letter-spacing:-.01em}
+.label,.eyebrow,.chapter .eyebrow,.belong .num,.timeline b,.post .kind,.contact dt,.facts dt,.req h3,.commit h3,.charity-feed h3,.subhead,.mlabel,.petition .field label,.pref legend{
+  font-family:var(--f-caps);font-weight:600;letter-spacing:.01em}
+.chapter .eyebrow,.mlabel{font-size:1rem}
+.petition .field label,.pref legend{font-size:1.05rem}
+.path b,.reasons h3,.calendar h3,.crow h4,.post h3,.about h3,.deg h3{font-family:var(--f-display);font-weight:400}
+
+/* candidate criteria */
+.req{border-top:0;margin-top:2.5rem}
+.req h3{margin:0 0 .5rem;font-size:1.05rem}
+.criteria{margin:0;display:grid}
+.criteria div{display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:1rem;align-items:baseline;padding:.75rem 0;border-top:1px solid var(--line)}
+.criteria div:last-child{border-bottom:1px solid var(--line)}
+.criteria dt{font-family:var(--f-display);font-size:1.3rem;color:var(--brass)}
+.criteria dd{margin:0;font-size:1.1rem}
+@media (max-width:420px){.criteria div{grid-template-columns:minmax(0,1fr);gap:.1rem}}
+
+/* lower sections: one consistent pattern */
+.sec{padding-block:clamp(3.5rem,8vw,5.5rem)}
+.sec.alt{background:var(--surface)}
+.light + .light{border-top:0}
+.sec .sec-head{margin-bottom:2rem}
+.sec .sec-head p{font-size:1.15rem;max-width:44rem}
+.sec-foot{margin-top:1.75rem;color:var(--muted);max-width:46rem}
+.textlink{color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-color:var(--brass);text-underline-offset:4px;text-decoration-thickness:2px}
+.textlink:hover{color:var(--brass)}
+.meet-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
+.meet-card{background:var(--bg);border:1px solid var(--line);padding:1.5rem;display:grid;gap:.45rem;align-content:start;min-width:0}
+.meet-card h3{font-size:1.5rem}
+.meet-card p{margin:0}
+.meet-when{font-weight:600}
+.meet-next{color:var(--muted)}
+.meet-next strong{color:var(--brass);font-weight:700}
+.meet-note{color:var(--muted)}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,19rem),1fr));gap:1.25rem;align-items:start}
+.pcard{background:var(--surface);border:1px solid var(--line);padding:1.5rem;display:grid;gap:.5rem;min-width:0}
+.sec.alt .pcard{background:var(--bg)}
+.pmeta{display:flex;gap:.8rem;flex-wrap:wrap;font-size:1rem;color:var(--muted);margin:0}
+.pkind{font-weight:700;color:var(--brass)}
+.pcard h3{font-size:1.45rem;line-height:1.2}
+.pbody p{color:var(--muted);margin:0}
+.pbody p+p{margin-top:.6rem}
+.pcard:not(.open) .pbody{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.pcard:not(.open) .pbody p+p{display:none}
+.readmore{justify-self:start;font:inherit;font-size:1.05rem;font-weight:600;background:none;border:0;padding:.3rem 0;color:var(--ink);text-decoration:underline;text-decoration-color:var(--brass);text-underline-offset:4px;cursor:pointer;min-height:2.75rem}
+.empty-note{color:var(--muted);padding:1.5rem;border:1px dashed var(--line);margin:0}
+.more-row{margin-top:1.5rem}
+.touch{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(2rem,5vw,4rem)}
+.touch .petition > p{margin-bottom:1.25rem}
+.contact-list{margin:0;display:grid}
+.contact-list div{display:grid;grid-template-columns:9rem minmax(0,1fr);gap:1rem;padding:.8rem 0;border-top:1px solid var(--line)}
+.contact-list dt{font-weight:600}
+.contact-list dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.contact-list .copyline{margin:0}
+@media (max-width:860px){.meet-grid,.touch{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:480px){.contact-list div{grid-template-columns:minmax(0,1fr);gap:.1rem}}
+</style>
+</head>
+<body>
+
+<a class="skiplink" href="#start">Skip to main content</a>
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#home">
+      <svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 7 L15 49 M32 7 L49 49"/><circle cx="32" cy="8" r="3" fill="currentColor"/>
+        <path d="M10 33 L32 55 L54 33" stroke="#d6b25e"/>
+      </svg>
+      Dunellan No. 480
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#why">Why join</a>
+      <a href="#join">How to join</a>
+      <a href="#meetings">Meetings</a>
+      <a href="#charity">Charity</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+  <div class="journey" id="journey">
+    <div class="stage">
+      <canvas id="scene" aria-hidden="true"></canvas>
+      <div class="vignette" aria-hidden="true"></div>
+
+      <div class="chapter c-title on" data-a="0" data-b="0.07" data-first data-name="Welcome">
+        <div class="wrap">
+          <div class="eyebrow">Lodge No. 480 · Sinnamon Park</div>
+          <h1>Dunellan <em>Lodge</em></h1>
+          <p class="lede">Making good men better since 1959.</p>
+          <div class="ctas">
+            <a class="btn" href="#join">Become a Freemason</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="chapter c-mid" data-a="0.08" data-b="0.17" data-name="Brotherhood">
+        <div class="wrap"><div class="ch-box">
+          <div class="bignum"><span data-scrollcount="6000000">0</span>+</div>
+          <h2>Freemasons worldwide</h2>
+          <p>Men of every faith, background and walk of life, joined in one brotherhood.</p>
+        </div></div>
+      </div>
+
+      <div class="chapter c-history" data-a="0.2" data-b="0.6" data-name="History">
+        <div class="wrap hist">
+          <div class="hist-main">
+            <span class="eyebrow">Our history</span>
+            <div class="eras">
+              <div class="era"><span class="yr">Middle Ages</span><p>Stonemasons gather in guilds to share their craft, bound by oaths to uphold moral codes.</p></div>
+              <div class="era"><span class="yr">Late 1600s</span><p>As the stonemasons' guilds decline, speculative Freemasonry takes shape in Scotland, Ireland and England.</p></div>
+              <div class="era"><span class="yr">1717</span><p>Four London lodges form the first Grand Lodge on 24 June.</p></div>
+              <div class="era"><span class="yr">1730s</span><p>Freemasonry spreads through Europe and North America.</p></div>
+              <div class="era"><span class="yr">Early 1800s</span><p>Freemasonry reaches the Australian colonies.</p></div>
+              <div class="era"><span class="yr">1859</span><p>North Australian Lodge holds Queensland's first recorded Masonic meeting, in Albert Street, Brisbane, the year Queensland is founded.</p></div>
+              <div class="era"><span class="yr">1921</span><p>Queensland's lodges unite as the United Grand Lodge of Queensland.</p></div>
+              <div class="era"><span class="yr">1959</span><p>Dunellan Lodge No. 480 is consecrated on 29 September and holds its first meeting on 22 October.</p></div>
+              <div class="era"><span class="yr">2019</span><p>Dunellan celebrates sixty years of meetings.</p></div>
+              <div class="era"><span class="yr">Today</span><p>Dunellan meets at Sinnamon Park, with brethren from Brisbane to the Gold Coast, Canberra and Chile.</p></div>
+            </div>
+          </div>
+          <ol class="rail" aria-hidden="true">
+            <li>Middle Ages</li><li>Late 1600s</li><li>1717</li><li>1730s</li><li>Early 1800s</li><li>1859</li><li>1921</li><li>1959</li><li>2019</li><li>Today</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="chapter c-mid c-right" data-a="0.62" data-b="0.69" data-name="Why join">
+        <div class="wrap"><div class="ch-box">
+          <span class="eyebrow">What you gain</span>
+          <h2>Friendship, growth and purpose</h2>
+          <p>Mentoring from experienced brethren, skills in leadership, and a welcome at lodges across Australia and the world.</p>
+        </div></div>
+      </div>
+
+      <div class="chapter c-mid" data-a="0.71" data-b="0.77" data-name="Values">
+        <div class="wrap"><div class="ch-box">
+          <h2>Values for today</h2>
+          <ul class="chips">
+            <li>Fairness</li><li>Tolerance</li><li>Inclusiveness</li><li>Honesty</li><li>Giving to others</li>
+          </ul>
+          <p>Each member follows his own faith, and lodge meetings set religion and politics aside, so men of every faith meet on common ground.</p>
+        </div></div>
+      </div>
+
+      <div class="chapter c-names" data-a="0.79" data-b="0.88" data-name="Famous brethren">
+        <div class="names-wrap">
+          <div class="wrap"><h2>In good company</h2></div>
+          <div class="mgroup">
+            <span class="wrap mlabel">Australians</span>
+            <div class="mrow" data-dir="1"><span>Sir Robert Menzies · Sir Donald Bradman · Sir Charles Kingsford Smith · Sir Edward "Weary" Dunlop</span></div>
+          </div>
+          <div class="mgroup">
+            <span class="wrap mlabel">Around the world</span>
+            <div class="mrow alt" data-dir="-1"><span>Wolfgang Amadeus Mozart · Sir Winston Churchill · Benjamin Franklin · George Washington · Sir Joseph Banks · Oscar Wilde · Peter Sellers · Steve Wozniak · Joseph Haydn · Robert Burns · Rudyard Kipling · Mark Twain · Sir Arthur Conan Doyle · Harry Houdini · Duke Ellington · Buzz Aldrin</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chapter c-end" data-a="0.9" data-b="1" data-last data-name="Join us">
+        <div class="wrap">
+          <h2>Your journey starts here</h2>
+          <div class="ctas" style="justify-content:center"><a class="btn" href="#join">Talk to us</a><a class="btn ghost" href="#start">Explore the lodge</a></div>
+        </div>
+      </div>
+
+      <a class="skipintro" href="#start">Skip intro</a>
+      <nav class="jindex" aria-label="Intro chapters"><i class="jline"><i id="jbar"></i></i></nav>
+      <span class="scrollcue" aria-hidden="true">Scroll</span>
+    </div>
+  </div>
+
+  <section id="start" class="light start">
+    <div class="wrap">
+      <h2 class="rv">Welcome to Dunellan</h2>
+      <p class="intro rv">Dunellan Lodge No. 480 has met since 1959 and now meets at Sinnamon Park in Brisbane's west. What brings you here today?</p>
+      <div class="paths rv">
+        <a class="path" href="#why"><b>I'm thinking of joining</b><span>Why men join, and how to start</span></a>
+        <a class="path" href="#meetings"><b>I'm a member or visitor</b><span>Meeting dates and lodge news</span></a>
+        <a class="path" href="#charity"><b>I want to see your charity work</b><span>How Dunellan gives back</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="light">
+    <div class="wrap">
+      <div class="sec-head rv"><h2>About Dunellan</h2></div>
+      <div class="about">
+        <div class="rv"><h3>Our lodge</h3><p>Dunellan is a modern, progressive lodge for men of all ages who wish to follow the principles and traditions of Freemasonry, improve their own wellbeing and serve their community.</p></div>
+        <div class="rv"><h3>Our members</h3><p>Our brethren come from many backgrounds and professions. They live across Brisbane and beyond, from the Gold Coast to Canberra and as far as Chile.</p></div>
+        <div class="rv"><h3>Our welcome</h3><p>Visitors and friends receive a warm welcome in the Lodge Room and at the Festive Board after each meeting, where harmony and good company prevail.</p></div>
+      </div>
+      <p class="history-note rv"><span>Consecrated 29 September 1959</span><span>First meeting 22 October 1959</span><span>Sixtieth anniversary 2019</span></p>
+    </div>
+  </section>
+
+  <section id="why" class="light">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <h2>Why men join Dunellan</h2>
+      </div>
+      <ul class="reasons rv">
+        <li><h3>Friendship</h3><p>Men from every background, and brothers to lean on.</p></li>
+        <li><h3>Personal growth</h3><p>A steady path to become the best you can be.</p></li>
+        <li><h3>Mentoring</h3><p>Experienced brethren guide you at every step.</p></li>
+        <li><h3>Leadership</h3><p>Skills for work, family and community.</p></li>
+        <li><h3>Giving back</h3><p>Lodge fundraising for causes close to home.</p></li>
+        <li><h3>Travel</h3><p>A welcome at lodges across Australia and the world.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="degrees" class="degrees-sec">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <h2>Three degrees of the Craft</h2>
+        <p>Every Freemason progresses through three ceremonies, called degrees.</p>
+      </div>
+      <div class="degrees">
+        <article class="deg">
+          <svg class="tool" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M8 40 L40 8"/><path d="M14 40 v-4 M20 34 v-4 M26 28 v-4 M32 22 v-4"/></svg>
+          <span class="roman">I</span>
+          <h3>Entered Apprentice</h3>
+          <p>The first degree. Your first step into Freemasonry and the foundations of lodge life.</p>
+        </article>
+        <article class="deg">
+          <svg class="tool" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M10 10 v28 h28"/><path d="M10 30 h6 M10 22 h6 M10 14 h6"/></svg>
+          <span class="roman">II</span>
+          <h3>Fellowcraft</h3>
+          <p>The second degree, focused on learning and personal growth.</p>
+        </article>
+        <article class="deg">
+          <svg class="tool" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 6 L12 42 M24 6 L36 42"/><circle cx="24" cy="7" r="2.5" fill="currentColor"/><path d="M15 32 h18"/></svg>
+          <span class="roman">III</span>
+          <h3>Master Mason</h3>
+          <p>The third degree and full membership of the lodge. Master Masons may progress through the lodge offices to the Master's chair.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="join" class="light">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <h2>How to join</h2>
+        <p>Joining is a big commitment, so the first step is a friendly chat to see whether Freemasonry suits you.</p>
+      </div>
+      <div class="join">
+        <div class="rv">
+          <ol class="steps">
+            <li><div><b>Get in touch</b><span>Fill in the form on this page or email our Secretary.</span></div></li>
+            <li><div><b>Meet us</b><span>Come along to a Festive Board or social event.</span></div></li>
+            <li><div><b>Apply</b><span>A Freemason nominates you. If you know none, the lodge will find a nominator for you. You also supply a National Police Check. Select "volunteer" when you order, as some providers charge less.</span></div></li>
+            <li><div><b>Initiation</b><span>The lodge welcomes you as an Entered Apprentice.</span></div></li>
+          </ol>
+          <div class="req">
+            <h3>Who can join</h3>
+            <dl class="criteria">
+              <div><dt>Age</dt><dd>Men over the age of 18</dd></div>
+              <div><dt>Character</dt><dd>Honest, law abiding and of good character</dd></div>
+              <div><dt>Belief</dt><dd>In a Supreme Being, of any faith</dd></div>
+            </dl>
+          </div>
+          <div class="commit">
+            <h3>What it asks of you</h3>
+            <p>One lodge meeting a month, usually an evening of a few hours. For meetings you wear a dinner suit, white shirt and black bow tie. There is a joining fee and yearly dues. Ask the Secretary for current amounts.</p>
+          </div>
+        </div>
+        <div class="petition rv" id="enquire">
+          <h3>Start a conversation</h3>
+          <p>A member of the lodge will contact you.</p>
+          <form id="enquiryForm" novalidate>
+            <div class="field"><label for="eqName">Your name</label><input id="eqName" autocomplete="name" required></div>
+            <div class="field"><label for="eqEmail">Email</label><input id="eqEmail" type="email" autocomplete="email" required></div>
+            <div class="row2">
+              <div class="field"><label for="eqPhone">Phone</label><input id="eqPhone" type="tel" autocomplete="tel"></div>
+              <div class="field"><label for="eqPostcode">Postcode</label><input id="eqPostcode" inputmode="numeric" autocomplete="postal-code" maxlength="4"></div>
+            </div>
+            <fieldset class="field pref">
+              <legend>Best way to reach you</legend>
+              <label><input type="radio" name="eqPref" value="phone" id="eqPrefPhone"> Phone</label>
+              <label><input type="radio" name="eqPref" value="email" id="eqPrefEmail" checked> Email</label>
+            </fieldset>
+            <div class="field"><label for="eqMsg">Any questions? (optional)</label><textarea id="eqMsg"></textarea></div>
+            <div class="hp" aria-hidden="true"><label>Leave this empty<input id="eqWebsite" tabindex="-1" autocomplete="off"></label></div>
+            <button class="btn" type="submit" id="eqBtn">Send</button>
+            <p class="status" id="eqStatus" role="status"></p>
+          </form>
+          <div class="fallback" id="eqFallback" hidden>
+            You can also email our Secretary, Colin Clapper:
+            <div class="copyline"><span class="emailText">colinclapper@bigpond.com</span><button class="btn small ghost copyBtn" type="button">Copy</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="meetings" class="light sec alt">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <h2>When we meet</h2>
+        <p>All meetings are held at the Sinnamon Park Masonic Centre.</p>
+      </div>
+      <div class="meet-grid rv">
+        <article class="meet-card">
+          <h3>Regular meeting</h3>
+          <p class="meet-when">Third Monday of each month</p>
+          <p class="meet-next">Next: <strong class="nextdate" data-nth="3"></strong></p>
+          <p class="meet-note">Followed by the Festive Board. Visiting brethren welcome.</p>
+        </article>
+        <article class="meet-card">
+          <h3>Practice and business</h3>
+          <p class="meet-when">Second Monday of each month</p>
+          <p class="meet-next">Next: <strong class="nextdate" data-nth="2"></strong></p>
+        </article>
+        <article class="meet-card">
+          <h3>Where</h3>
+          <p class="meet-when">Sinnamon Park Masonic Centre</p>
+          <p class="meet-note">671 Seventeen Mile Rocks Road<br>Sinnamon Park QLD 4073</p>
+          <a class="textlink" href="https://www.google.com/maps/search/?api=1&amp;query=671+Seventeen+Mile+Rocks+Road+Sinnamon+Park+QLD+4073" target="_blank" rel="noopener">Get directions</a>
+        </article>
+      </div>
+      <p class="sec-foot rv">We also hold social events through the year, including barefoot bowls, trivia nights and a Christmas function. Families and friends are welcome. Dates appear in <a class="textlink" href="#news">Lodge news</a>.</p>
+    </div>
+  </section>
+
+  <section id="charity" class="light sec">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <h2>Charity</h2>
+        <p>Dunellan takes part in charitable and philanthropic work, including the appeals of Freemasons Queensland and its charity, Hand Heart Pocket.</p>
+      </div>
+      <div class="card-grid" id="charityFeed" hidden></div>
+      <p class="sec-foot rv"><a class="textlink" href="https://www.handheartpocket.org.au/" target="_blank" rel="noopener">Learn about Hand Heart Pocket</a></p>
+    </div>
+  </section>
+
+  <section id="news" class="light sec alt">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <h2>Lodge news</h2>
+        <p>News, newsletters and upcoming events from the lodge.</p>
+      </div>
+      <div class="tabs" role="group" aria-label="Show">
+        <button class="tab" type="button" data-f="all" aria-pressed="true">Everything</button>
+        <button class="tab" type="button" data-f="news" aria-pressed="false">News</button>
+        <button class="tab" type="button" data-f="newsletter" aria-pressed="false">Newsletters</button>
+        <button class="tab" type="button" data-f="charity" aria-pressed="false">Charity</button>
+      </div>
+      <div class="card-grid" id="feed"></div>
+      <p class="empty-note" id="feedEmpty">News from the lodge appears here.</p>
+      <div class="more-row"><button class="btn ghost" type="button" id="moreBtn" hidden>Show more news</button></div>
+    </div>
+  </section>
+
+  <section id="contact" class="light sec">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <h2>Stay in touch</h2>
+      </div>
+      <div class="touch rv">
+        <div class="petition" id="newsletter">
+          <h3>Get the newsletter</h3>
+          <p>Meeting notices and lodge news, by email.</p>
+          <form id="subForm" novalidate>
+            <div class="field"><label for="subName">Name</label><input id="subName" autocomplete="name"></div>
+            <div class="field"><label for="subEmail">Email</label><input id="subEmail" type="email" autocomplete="email" required></div>
+            <div class="hp" aria-hidden="true"><label>Leave this empty<input id="subWebsite" tabindex="-1" autocomplete="off"></label></div>
+            <button class="btn" type="submit" id="subBtn">Subscribe</button>
+            <p class="status" id="subStatus" role="status"></p>
+          </form>
+          <div class="fallback" id="subFallback" hidden>
+            You can also email the Secretary and ask to join the newsletter list:
+            <div class="copyline"><span class="emailText">colinclapper@bigpond.com</span><button class="btn small ghost copyBtn" type="button">Copy</button></div>
+          </div>
+        </div>
+        <div class="petition">
+          <h3>Contact the lodge</h3>
+          <p>Questions about the lodge or joining? Our Secretary is happy to help.</p>
+          <dl class="contact-list">
+            <div><dt>Lodge Secretary</dt><dd>Colin Clapper</dd></div>
+            <div><dt>Email</dt><dd class="copyline"><span class="emailText">colinclapper@bigpond.com</span><button class="btn small ghost copyBtn" type="button">Copy</button></dd></div>
+            <div><dt>Address</dt><dd>Sinnamon Park Masonic Centre, 671 Seventeen Mile Rocks Road, Sinnamon Park QLD 4073</dd></div>
+            <div><dt>Grand Lodge</dt><dd><a class="textlink" href="https://uglq.org.au/" target="_blank" rel="noopener">Freemasons Queensland</a></dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Dunellan Lodge No. 480 · United Grand Lodge of Queensland</span>
+    <span>Sinnamon Park, Brisbane · <a href="/admin">Members login</a></span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* ---------- 3D lodge room, scroll driven ---------- */
+(function(){
+  const canvas = document.getElementById("scene");
+  const journey = document.getElementById("journey");
+  const stage = canvas.parentElement;
+  const chapters = Array.from(document.querySelectorAll(".chapter"));
+  const bar = document.getElementById("jbar");
+  const counters = Array.from(document.querySelectorAll("[data-scrollcount]"));
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const clamp = (v,a,b) => Math.min(b===undefined?1:b, Math.max(a||0, v));
+  const ease = t => t<.5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2;
+  const smooth = (a,b,v) => { const t = clamp((v-a)/(b-a)); return t*t*(3-2*t); };
+  const hist = document.querySelector(".c-history");
+  const eras = hist ? Array.from(hist.querySelectorAll(".era")) : [];
+  const railItems = hist ? Array.from(hist.querySelectorAll(".rail li")) : [];
+  const mrows = Array.from(document.querySelectorAll(".mrow"));
+  const jindex = document.querySelector(".jindex");
+  const named = chapters.filter(c => c.dataset.name);
+  const jbtns = named.map(c => {
+    const btn = document.createElement("button"); btn.type = "button"; btn.textContent = c.dataset.name;
+    btn.addEventListener("click", () => {
+      const a = +c.dataset.a, b = +c.dataset.b;
+      const mid = c.hasAttribute("data-first") ? 0 : c.hasAttribute("data-last") ? 1 : a + (b-a)*.5;
+      const span = journey.offsetHeight - innerHeight;
+      scrollTo({top: journey.offsetTop + mid*span, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+    });
+    if(jindex) jindex.append(btn); return btn;
+  });
+  let lastEra = -1;
+
+  let target = 0, prog = 0;
+  function readScroll(){
+    const r = journey.getBoundingClientRect(), span = journey.offsetHeight - innerHeight;
+    target = span > 0 ? clamp(-r.top/span) : 0;
+  }
+  readScroll();
+  addEventListener("scroll", readScroll, {passive:true});
+  addEventListener("resize", readScroll);
+
+  function updateChapters(p){
+    chapters.forEach(ch => {
+      const a = +ch.dataset.a, b = +ch.dataset.b, len = b-a;
+      const first = ch.hasAttribute("data-first"), last = ch.hasAttribute("data-last");
+      const fIn = Math.min(len*.25, .03), fOut = Math.min(len*.4, .045);
+      const fin = first ? 1 : smooth(a, a+fIn, p);
+      const exit = last ? 0 : smooth(b-fOut*.6, b+fOut*.4, p);
+      const o = Math.min(fin, 1-exit);
+      const y = (1-fin)*50 - exit*24;
+      const s = (first ? 1 + exit*1.1 : 1 + exit*.08) * (first ? 1 : .94 + fin*.06);
+      ch.style.opacity = o.toFixed(3);
+      ch.style.transform = "translate3d(0," + y.toFixed(1) + "px,0) scale(" + s.toFixed(3) + ")";
+      ch.style.filter = exit > .02 ? "blur(" + (exit*4).toFixed(1) + "px)" : "";
+      ch.style.visibility = o < .01 ? "hidden" : "visible";
+      ch.classList.toggle("on", o > .5);
+    });
+    if(bar) bar.style.transform = "scaleY(" + p.toFixed(3) + ")";
+    counters.forEach(c => {
+      const ch = c.closest(".chapter"), a = +ch.dataset.a, b = +ch.dataset.b;
+      const v = Math.round(+c.dataset.scrollcount * ease(smooth(a, a+(b-a)*.55, p)));
+      if(c._v !== v){ c._v = v; c.textContent = v.toLocaleString("en-AU"); }
+    });
+    if(hist){
+      const a = +hist.dataset.a, b = +hist.dataset.b;
+      const t = clamp(((p-a)/(b-a) - .06) / .88);
+      const idx = Math.min(eras.length-1, Math.floor(t*eras.length));
+      if(idx !== lastEra){
+        lastEra = idx;
+        eras.forEach((e,i) => { e.classList.toggle("on", i===idx); e.classList.toggle("past", i<idx); });
+        railItems.forEach((r,i) => { r.classList.toggle("on", i===idx); r.classList.toggle("done", i<idx); });
+      }
+    }
+    mrows.forEach(r => {
+      const ch = r.closest(".chapter"), a = +ch.dataset.a, b = +ch.dataset.b;
+      const t = clamp((p-a)/(b-a)), sp = r.firstElementChild;
+      const over = Math.max(0, sp.scrollWidth - r.clientWidth + 40);
+      const x = +r.dataset.dir > 0 ? -t*over : -(1-t)*over;
+      sp.style.transform = "translate3d(" + x.toFixed(1) + "px,0,0)";
+    });
+    let best = -1, bo = 0;
+    named.forEach((c,i) => { const o = +c.style.opacity || 0; if(o > bo){ bo = o; best = i; } });
+    jbtns.forEach((btn,i) => btn.classList.toggle("on", i===best));
+  }
+
+  /* three.js scene: approach the temple, enter the porch, walk the hall to the inner sanctuary */
+  let renderer = null;
+  const fallbackBg = () => { canvas.style.background = "radial-gradient(ellipse at 50% 35%,#22336e,#0a1128 70%)"; };
+  if(window.THREE){ try { renderer = new THREE.WebGLRenderer({canvas, antialias:true}); } catch(e){ renderer = null; } }
+  if(!renderer) fallbackBg();
+
+  let render = () => {}, animateMotes = () => {};
+  if(renderer){
+    renderer.setPixelRatio(Math.min(devicePixelRatio||1, 2));
+    renderer.outputEncoding = THREE.sRGBEncoding;
+    const NIGHT = 0x0a1128;
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(NIGHT);
+    scene.fog = new THREE.Fog(NIGHT, 18, 95);
+    const camera = new THREE.PerspectiveCamera(46, 1, .1, 300);
+
+    const box = (w,h,d,mat,x,y,z) => { const m = new THREE.Mesh(new THREE.BoxGeometry(w,h,d), mat); m.position.set(x,y,z); scene.add(m); return m; };
+
+    // materials
+    const limestone = new THREE.MeshStandardMaterial({color:0xd2c7ab, roughness:.85, metalness:.02});
+    const darkStone = new THREE.MeshStandardMaterial({color:0x8f8670, roughness:.9});
+    const cedar = new THREE.MeshStandardMaterial({color:0x6b4528, roughness:.7, metalness:.05});
+    const gold = new THREE.MeshStandardMaterial({color:0xd6ad55, roughness:.3, metalness:.8, emissive:0x2a1d05});
+    const bronze = new THREE.MeshStandardMaterial({color:0xa9773f, roughness:.35, metalness:.8, emissive:0x1a0f04});
+    const ground = new THREE.MeshStandardMaterial({color:0x1b2135, roughness:.95});
+
+    // dimensions
+    const PH = 1.2;            // platform height
+    const FRONT = 4;           // porch front face
+    const HALL = 0;            // hall front wall
+    const SANCT = -28;         // sanctuary wall
+    const BACK = -37;          // back wall
+    const HW = 4.6, HH = 11;   // hall half width, hall height
+
+    // ground, platform and front steps
+    const g = new THREE.Mesh(new THREE.PlaneGeometry(300,300), ground); g.rotation.x = -Math.PI/2; scene.add(g);
+    box(20, PH, 50, darkStone, 0, PH/2, -15);
+    for(let i=0;i<8;i++){ const h = PH*(8-i)/9; box(10, h, .55, limestone, 0, h/2, 10 + .55*i + .275); }
+
+    // chequered floor through porch and hall
+    const tc = document.createElement("canvas"); tc.width = tc.height = 256;
+    const tg = tc.getContext("2d");
+    for(let y=0;y<2;y++) for(let x=0;x<2;x++){ tg.fillStyle = (x+y)%2 ? "#0e1222" : "#dcdfe8"; tg.fillRect(x*128,y*128,128,128); }
+    const tex = new THREE.CanvasTexture(tc);
+    tex.wrapS = tex.wrapT = THREE.RepeatWrapping; tex.repeat.set(4.6, 18);
+    tex.encoding = THREE.sRGBEncoding; tex.anisotropy = renderer.capabilities.getMaxAnisotropy();
+    const floor = new THREE.Mesh(new THREE.PlaneGeometry(HW*2, FRONT-BACK), new THREE.MeshStandardMaterial({map:tex, roughness:.3, metalness:.12}));
+    floor.rotation.x = -Math.PI/2; floor.position.set(0, PH+.01, (FRONT+BACK)/2); scene.add(floor);
+
+    // facade (porch front) with a tall doorway, stepped crown
+    const FW = 16, FHt = 17, DW = 3.8, DH = 8.5;
+    box((FW-DW)/2, FHt, 1, limestone, -(DW/2 + (FW-DW)/4), PH+FHt/2, FRONT);
+    box((FW-DW)/2, FHt, 1, limestone,  (DW/2 + (FW-DW)/4), PH+FHt/2, FRONT);
+    box(DW, FHt-DH, 1, limestone, 0, PH+DH+(FHt-DH)/2, FRONT);
+    box(FW+.8, .6, 1.4, limestone, 0, PH+FHt+.3, FRONT);
+    box(FW-2, .6, 1.2, limestone, 0, PH+FHt+.9, FRONT);
+    box(FW-4.5, .8, 1, limestone, 0, PH+FHt+1.6, FRONT);
+    box(DW+1.2, .5, 1.3, darkStone, 0, PH+DH+.25, FRONT+.1);          // lintel
+    // porch side walls and roof
+    box(1, FHt, FRONT-HALL, limestone, -FW/2+.5, PH+FHt/2, (FRONT+HALL)/2);
+    box(1, FHt, FRONT-HALL, limestone,  FW/2-.5, PH+FHt/2, (FRONT+HALL)/2);
+    box(FW, .8, FRONT-HALL, limestone, 0, PH+FHt-.4, (FRONT+HALL)/2);
+
+    // hall front wall with doorway
+    const IW = 3.2, IH = 7.2;
+    box((HW*2+2-IW)/2, HH, .8, cedar, -(IW/2 + (HW*2+2-IW)/4), PH+HH/2, HALL);
+    box((HW*2+2-IW)/2, HH, .8, cedar,  (IW/2 + (HW*2+2-IW)/4), PH+HH/2, HALL);
+    box(IW, HH-IH, .8, cedar, 0, PH+IH+(HH-IH)/2, HALL);
+    box(IW+.6, .35, 1, gold, 0, PH+IH+.18, HALL+.1);
+
+    // hall walls (stone outside, cedar inside), roof
+    const L = HALL - BACK;
+    box(1, HH, L, limestone, -HW-.5, PH+HH/2, (HALL+BACK)/2);
+    box(1, HH, L, limestone,  HW+.5, PH+HH/2, (HALL+BACK)/2);
+    box(.1, HH, L, cedar, -HW+.05, PH+HH/2, (HALL+BACK)/2);
+    box(.1, HH, L, cedar,  HW-.05, PH+HH/2, (HALL+BACK)/2);
+    box(HW*2+2, .8, L, limestone, 0, PH+HH+.4, (HALL+BACK)/2);
+    box(HW*2, .2, L, cedar, 0, PH+HH-.1, (HALL+BACK)/2);           // cedar ceiling
+    box(HW*2+2, HH, 1, limestone, 0, PH+HH/2, BACK);
+    // side chambers on the outside, three storeys
+    for(const sx of [-1,1]) for(let st=0; st<3; st++) box(2.6, 2.4, L-2, limestone, sx*(HW+2.3), PH+1.2+st*2.5, (HALL+BACK)/2);
+
+    // high windows along the hall
+    const winMat = new THREE.MeshBasicMaterial({color:0x6f88d8, transparent:true, opacity:.55});
+    for(let z=-3; z>SANCT; z-=4) for(const sx of [-1,1]){
+      const w = new THREE.Mesh(new THREE.PlaneGeometry(.9,2.2), winMat);
+      w.position.set(sx*(HW-.12), PH+HH-2.2, z); w.rotation.y = -sx*Math.PI/2; scene.add(w);
+    }
+
+    // sanctuary wall with raised doorway, glowing inner room
+    const SW = 3, SH = 6;
+    box((HW*2-SW)/2, HH, .8, cedar, -(SW/2 + (HW*2-SW)/4), PH+HH/2, SANCT);
+    box((HW*2-SW)/2, HH, .8, cedar,  (SW/2 + (HW*2-SW)/4), PH+HH/2, SANCT);
+    box(SW, HH-SH-.4, .8, cedar, 0, PH+.4+SH+(HH-SH-.4)/2, SANCT);
+    box(SW+.8, .4, 1.6, gold, 0, PH+.2, SANCT+.4);                     // raised step
+    box(SW+.6, .3, 1, gold, 0, PH+.4+SH+.15, SANCT+.1);
+    const inner = new THREE.MeshStandardMaterial({color:0x4a3018, roughness:.6, metalness:.2, emissive:0x2a1806});
+    const innerWall = new THREE.Mesh(new THREE.PlaneGeometry(HW*2, HH), inner); innerWall.position.set(0, PH+HH/2, BACK+.55); scene.add(innerWall);
+
+    // two bronze pillars before the porch
+    const pillars = [];
+    for(const sx of [-1,1]){
+      const p = new THREE.Group();
+      const base = new THREE.Mesh(new THREE.CylinderGeometry(.85,.95,.6,32), bronze); base.position.y = .3; p.add(base);
+      const shaft = new THREE.Mesh(new THREE.CylinderGeometry(.62,.68,9,40), bronze); shaft.position.y = 5.1; p.add(shaft);
+      const cap = new THREE.Mesh(new THREE.CylinderGeometry(1,.62,1.2,40), bronze); cap.position.y = 10.2; p.add(cap);
+      const globe = new THREE.Mesh(new THREE.SphereGeometry(.85,40,24), gold); globe.position.y = 11.55; p.add(globe);
+      const ring = new THREE.Mesh(new THREE.TorusGeometry(.92,.04,8,64), gold); ring.position.y = 11.55; ring.rotation.x = Math.PI/2.4; p.add(ring);
+      p.position.set(sx*3.4, PH, FRONT+2.2); scene.add(p); pillars.push({globe, ring});
+    }
+
+    // columns and lamps down the hall, lit one pair at a time
+    const lamps = [];
+    const colZ = []; for(let z=-3.5; z>SANCT+1; z-=3.6) colZ.push(z);
+    const gc = document.createElement("canvas"); gc.width = gc.height = 128;
+    const gg = gc.getContext("2d"); const grd = gg.createRadialGradient(64,64,0,64,64,64);
+    grd.addColorStop(0,"rgba(255,214,140,.9)"); grd.addColorStop(1,"rgba(255,214,140,0)");
+    gg.fillStyle = grd; gg.fillRect(0,0,128,128);
+    const glowTex = new THREE.CanvasTexture(gc);
+    colZ.forEach((z,k) => {
+      for(const sx of [-1,1]){
+        const x = sx*(HW-1.1);
+        const col = new THREE.Mesh(new THREE.CylinderGeometry(.3,.34,6.4,24), limestone); col.position.set(x, PH+3.2, z); scene.add(col);
+        const cap = new THREE.Mesh(new THREE.CylinderGeometry(.48,.32,.4,24), limestone); cap.position.set(x, PH+6.6, z); scene.add(cap);
+        const bowlMat = new THREE.MeshStandardMaterial({color:0x7a5a2a, emissive:0xffb85c, emissiveIntensity:0, roughness:.4, metalness:.6});
+        const bowl = new THREE.Mesh(new THREE.SphereGeometry(.28,20,12), bowlMat); bowl.position.set(x, PH+7.05, z); scene.add(bowl);
+        const sp = new THREE.Sprite(new THREE.SpriteMaterial({map:glowTex, transparent:true, depthWrite:false, blending:THREE.AdditiveBlending, opacity:0}));
+        sp.scale.set(2.6,2.6,1); sp.position.set(x, PH+7.1, z); scene.add(sp);
+        lamps.push({bowlMat, sp, th:.36 + k*.035});
+      }
+    });
+
+    // square and compasses within the inner sanctuary
+    const EZ = SANCT - 4.5, EY = PH + 3.6;
+    const emblem = new THREE.Group();
+    const sq = new THREE.Group();
+    const armGeo = new THREE.BoxGeometry(.24,2.3,.07); armGeo.translate(0,1.15,0);
+    const a1 = new THREE.Mesh(armGeo, gold); a1.rotation.z = Math.PI/4;
+    const a2 = new THREE.Mesh(armGeo, gold); a2.rotation.z = -Math.PI/4;
+    sq.add(a1,a2); sq.position.set(0,-1.15,0); emblem.add(sq);
+    const comp = new THREE.Group();
+    const legGeo = new THREE.BoxGeometry(.13,2.75,.07); legGeo.translate(0,-1.375,0);
+    const pointGeo = new THREE.ConeGeometry(.065,.3,12); pointGeo.rotateZ(Math.PI); pointGeo.translate(0,-2.9,0);
+    [0.44,-0.44].forEach(r => { const leg = new THREE.Group(); leg.add(new THREE.Mesh(legGeo,gold), new THREE.Mesh(pointGeo,gold)); leg.rotation.z = r; comp.add(leg); });
+    const hinge = new THREE.Mesh(new THREE.CylinderGeometry(.17,.17,.16,32), gold); hinge.rotation.x = Math.PI/2; comp.add(hinge);
+    const knob = new THREE.Mesh(new THREE.SphereGeometry(.12,20,12), gold); knob.position.y = .26; comp.add(knob);
+    comp.position.set(0,1.35,.09); emblem.add(comp);
+    emblem.scale.setScalar(.75);
+    emblem.position.set(0, EY, EZ); scene.add(emblem);
+
+    // door glows
+    const mkGlow = (x,y,z,s) => { const sp = new THREE.Sprite(new THREE.SpriteMaterial({map:glowTex, transparent:true, depthWrite:false, fog:false, blending:THREE.AdditiveBlending})); sp.scale.set(s,s,1); sp.position.set(x,y,z); scene.add(sp); return sp; };
+    const frontGlow = mkGlow(0, PH+4, FRONT-.6, 9);
+    const sanctGlow = mkGlow(0, PH+3.6, BACK+1.4, 5);
+
+    // stars
+    const SN = 900, spos = new Float32Array(SN*3);
+    for(let i=0;i<SN;i++){ const th = Math.random()*Math.PI*2, ph = Math.random()*Math.PI*.45, r = 160; spos[i*3] = r*Math.cos(th)*Math.sin(ph); spos[i*3+1] = r*Math.cos(ph)*.9+10; spos[i*3+2] = r*Math.sin(th)*Math.sin(ph); }
+    const sg = new THREE.BufferGeometry(); sg.setAttribute("position", new THREE.BufferAttribute(spos,3));
+    scene.add(new THREE.Points(sg, new THREE.PointsMaterial({color:0xdfe6ff, size:.6, sizeAttenuation:true, fog:false, transparent:true, opacity:.8})));
+
+    // dust in the hall
+    const N = 400, pos = new Float32Array(N*3), spd = new Float32Array(N);
+    for(let i=0;i<N;i++){ pos[i*3] = (Math.random()-.5)*HW*1.8; pos[i*3+1] = PH+Math.random()*9; pos[i*3+2] = HALL - Math.random()*(HALL-BACK); spd[i] = .1+Math.random()*.25; }
+    const pg = new THREE.BufferGeometry(); pg.setAttribute("position", new THREE.BufferAttribute(pos,3));
+    scene.add(new THREE.Points(pg, new THREE.PointsMaterial({color:0xffd98f, size:.04, transparent:true, opacity:.8, depthWrite:false, blending:THREE.AdditiveBlending})));
+    animateMotes = (dt, t) => {
+      const a = pg.attributes.position.array;
+      for(let i=0;i<N;i++){ a[i*3+1] += spd[i]*dt; a[i*3] += Math.sin(t*.5+i)*.0015; if(a[i*3+1] > PH+9) a[i*3+1] = PH; }
+      pg.attributes.position.needsUpdate = true;
+    };
+
+    // lights
+    scene.add(new THREE.HemisphereLight(0x7088d8, NIGHT, .45));
+    const moon = new THREE.DirectionalLight(0xb8c6ff, .75); moon.position.set(-20,30,40); scene.add(moon);
+    const porchLight = new THREE.PointLight(0xffd6a0, 2.2, 22, 1.6); porchLight.position.set(0, PH+6, FRONT+5); scene.add(porchLight);
+    const carry = new THREE.PointLight(0xffcf96, 0, 16, 1.8); scene.add(carry);
+    const sanctLight = new THREE.PointLight(0xffd27a, 1.3, 14, 1.8); sanctLight.position.set(0, PH+5, SANCT-3); scene.add(sanctLight);
+    const spot = new THREE.SpotLight(0xfff1d6, 1.6, 16, .35, .5, 1.2); spot.position.set(0, PH+7, SANCT+2.5); spot.target = emblem; scene.add(spot);
+
+    // camera path
+    const keys = [
+      [0.00, [0, 7, 52],  [0, 8, 0]],
+      [0.09, [3, 5, 34],  [0, 7, 0]],
+      [0.19, [0, 3.4, 17], [0, 5, 0]],
+      [0.28, [0, 3, 8.4], [0, 4.3, -4]],
+      [0.36, [0, 3, 2],   [0, 3.9, -18]],
+      [0.55, [0, 3, -9],  [0, 3.9, -30]],
+      [0.72, [0, 3, -17], [0, 3.9, -32]],
+      [0.88, [0, 3.1, -23], [0, EY, EZ]],
+      [1.00, [0, 3.3, -26.2], [0, EY, EZ]],
+    ];
+    const posCurve = new THREE.CatmullRomCurve3(keys.map(k => new THREE.Vector3(...k[1])), false, "centripetal");
+    const lookCurve = new THREE.CatmullRomCurve3(keys.map(k => new THREE.Vector3(...k[2])), false, "centripetal");
+    const toU = p => {
+      for(let i=0;i<keys.length-1;i++){
+        const a = keys[i][0], b = keys[i+1][0];
+        if(p <= b){ const t = (p-a)/(b-a); return (i + t*t*(3-2*t)*.35 + t*.65) / (keys.length-1); }
+      }
+      return 1;
+    };
+    const cPos = new THREE.Vector3(), cLook = new THREE.Vector3();
+
+    function size(){
+      const w = canvas.clientWidth, h = canvas.clientHeight; if(!w || !h) return;
+      renderer.setSize(w,h,false); camera.aspect = w/h;
+      camera.fov = w < 640 ? 62 : 46; camera.updateProjectionMatrix();
+    }
+    size(); addEventListener("resize", size);
+
+    let mx = 0, my = 0, tx = 0, ty = 0;
+    addEventListener("pointermove", e => { tx = e.clientX/innerWidth-.5; ty = e.clientY/innerHeight-.5; }, {passive:true});
+
+    render = (t, p) => {
+      mx += (tx-mx)*.05; my += (ty-my)*.05;
+      const u = toU(p);
+      posCurve.getPoint(u, cPos); lookCurve.getPoint(u, cLook);
+      const inside = smooth(.3,.38,p);
+      camera.position.set(cPos.x + mx*(1.6 - inside*1.2), cPos.y - my*(.6 - inside*.4), cPos.z);
+      cLook.x += mx*.8; camera.lookAt(cLook);
+      carry.position.set(0, PH+5, cPos.z - 3);
+      carry.intensity = 1.6*inside;
+      porchLight.intensity = 2.2*(1-smooth(.36,.45,p)*.6);
+      frontGlow.material.opacity = .9*(1-smooth(.27,.33,p));
+      sanctGlow.material.opacity = .25 + .2*smooth(.6,.95,p) + Math.sin(t*1.3)*.04;
+      lamps.forEach(l => { const k = smooth(l.th, l.th+.03, p); l.bowlMat.emissiveIntensity = k*2.2; l.sp.material.opacity = k*(.85 + Math.sin(t*3 + l.th*40)*.08); });
+      emblem.rotation.y = Math.sin(t*.35)*.45*(1-smooth(.86,1,p)) + smooth(.86,.99,p)*Math.PI*2;
+      emblem.position.y = EY + Math.sin(t*.8)*.06;
+      pillars.forEach(pl => { pl.globe.rotation.y = t*.25; pl.ring.rotation.z = t*.2; });
+      renderer.render(scene, camera);
+    };
+  }
+
+  if(reduce){
+    updateChapters(0);
+    const still = () => render(1.2, 0);
+    still(); addEventListener("resize", still);
+    return;
+  }
+
+  let visible = true, running = false;
+  const clock = window.THREE ? new THREE.Clock() : null;
+  let last = performance.now();
+  function loop(){
+    if(running) return; running = true;
+    const tick = now => {
+      if(!visible || document.hidden){ running = false; return; }
+      const dt = Math.min((now-last)/1000, .05); last = now;
+      const t = clock ? clock.getElapsedTime() : now/1000;
+      prog += (target-prog) * Math.min(1, dt*6);
+      if(Math.abs(target-prog) < .0005) prog = target;
+      updateChapters(prog);
+      animateMotes(dt, t);
+      render(t, prog);
+      requestAnimationFrame(tick);
+    };
+    last = performance.now();
+    requestAnimationFrame(tick);
+  }
+  new IntersectionObserver(es => { visible = es[0].isIntersecting; if(visible) loop(); }).observe(stage);
+  document.addEventListener("visibilitychange", () => { if(!document.hidden) loop(); });
+  updateChapters(target); prog = target;
+  loop();
+})();
+
+/* ---------- page interactions ---------- */
+(function(){
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const top = document.getElementById("top");
+  const onScroll = () => top.classList.toggle("solid", scrollY > 60);
+  onScroll(); addEventListener("scroll", onScroll, {passive:true});
+
+  // reveal: content is visible at rest; elements below the fold slide up on entry
+  if(!reduce && "IntersectionObserver" in window){
+    const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.remove("pre"); io.unobserve(e.target); } }), {rootMargin:"0px 0px -8% 0px"});
+    document.querySelectorAll(".rv").forEach((el,i) => {
+      if(el.getBoundingClientRect().top > innerHeight){ el.classList.add("pre"); el.style.transitionDelay = (i%3)*80+"ms"; io.observe(el); }
+    });
+  }
+
+  // count up stats
+  if(!reduce){
+    const sio = new IntersectionObserver(es => es.forEach(e => {
+      if(!e.isIntersecting) return; sio.unobserve(e.target);
+      const el = e.target, end = +el.dataset.count, suf = el.dataset.suffix||"", start = end > 1000 ? end-60 : 0, t0 = performance.now();
+      const step = now => { const p = Math.min(1,(now-t0)/1400), v = Math.round(start+(end-start)*(1-Math.pow(1-p,3))); el.textContent = v+suf; if(p<1) requestAnimationFrame(step); };
+      requestAnimationFrame(step);
+    }), {threshold:.6});
+    document.querySelectorAll("[data-count]").forEach(el => sio.observe(el));
+  }
+
+  // 3D tilt on degree cards
+  if(!reduce){
+    document.querySelectorAll(".deg").forEach(c => {
+      c.addEventListener("pointermove", e => {
+        const r = c.getBoundingClientRect(), x = (e.clientX-r.left)/r.width-.5, y = (e.clientY-r.top)/r.height-.5;
+        c.style.transform = `rotateY(${x*14}deg) rotateX(${-y*12}deg) translateZ(10px)`;
+      });
+      c.addEventListener("pointerleave", () => { c.style.transform = ""; });
+    });
+  }
+})();
+
+
+/* next meeting dates */
+(function(){
+  const nth = (y,m,n) => { const d = new Date(y,m,1); const off = (8 - d.getDay()) % 7; return new Date(y,m,1+off+(n-1)*7); };
+  const now = new Date(); now.setHours(0,0,0,0);
+  document.querySelectorAll(".nextdate[data-nth]").forEach(el => {
+    const n = +el.dataset.nth; let d = nth(now.getFullYear(), now.getMonth(), n);
+    if(d < now) d = nth(now.getFullYear(), now.getMonth()+1, n);
+    el.textContent = d.getTime()===now.getTime() ? "Tonight" : d.toLocaleDateString("en-AU",{weekday:"long",day:"numeric",month:"long"});
+  });
+})();
+/* ---------- news, newsletter, enquiries ---------- */
+(function(){
+  const $ = s => document.querySelector(s);
+  const fmt = d => { try { return new Date(d+"T00:00:00").toLocaleDateString("en-AU",{day:"numeric",month:"short",year:"numeric"}); } catch(e){ return d; } };
+
+  document.addEventListener("click", e => {
+    const b = e.target.closest(".copyBtn"); if(!b) return;
+    const t = b.parentElement.querySelector(".emailText");
+    const done = () => { const o = b.textContent; b.textContent = "Copied"; setTimeout(() => b.textContent = o, 1500); };
+    try { navigator.clipboard.writeText(t.textContent).then(done, () => {}); } catch(err){}
+  });
+
+  async function post(path, body){
+    const res = await fetch(path, {method:"POST", headers:{"content-type":"application/json"}, body:JSON.stringify(body)});
+    let data = {}; try { data = await res.json(); } catch(e){}
+    if (!res.ok) throw new Error(data.error || "Something went wrong. Please try again.");
+    return data;
+  }
+  const validEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+  function showFallback(form, fb){ form.hidden = true; fb.hidden = false; }
+
+  /* news feed */
+  let filter = "all", posts = [], shownCount = 6;
+  const kindName = k => k==="newsletter" ? "Newsletter" : k==="charity" ? "Charity" : "News";
+  function card(p){
+    const a = document.createElement("article"); a.className = "pcard";
+    const meta = document.createElement("p"); meta.className = "pmeta";
+    const k = document.createElement("span"); k.className = "pkind"; k.textContent = kindName(p.kind);
+    const tm = document.createElement("time"); tm.dateTime = p.date||""; tm.textContent = fmt(p.date||"");
+    meta.append(k, tm);
+    const h = document.createElement("h3"); h.textContent = p.title||"";
+    const bd = document.createElement("div"); bd.className = "pbody";
+    const paras = String(p.body||"").split(/\n\s*\n/).map(x => x.trim()).filter(Boolean);
+    paras.forEach(par => { const pe = document.createElement("p"); pe.textContent = par; bd.append(pe); });
+    a.append(meta, h, bd);
+    if(paras.length > 1 || (paras[0]||"").length > 220){
+      const more = document.createElement("button"); more.type = "button"; more.className = "readmore"; more.textContent = "Read more";
+      more.setAttribute("aria-expanded","false");
+      more.addEventListener("click", () => { const open = a.classList.toggle("open"); more.textContent = open ? "Show less" : "Read more"; more.setAttribute("aria-expanded", String(open)); });
+      a.append(more);
+    } else a.classList.add("open");
+    return a;
+  }
+  document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => {
+    filter = t.dataset.f; shownCount = 6;
+    document.querySelectorAll(".tab").forEach(x => x.setAttribute("aria-pressed", String(x===t)));
+    renderFeed();
+  }));
+  $("#moreBtn").addEventListener("click", () => { shownCount += 6; renderFeed(); });
+  function renderFeed(){
+    const feed = $("#feed"); feed.replaceChildren();
+    const list = posts.filter(p => filter==="all" || p.kind===filter);
+    list.slice(0, shownCount).forEach(p => feed.append(card(p)));
+    $("#feedEmpty").hidden = list.length > 0;
+    $("#feedEmpty").textContent = filter==="all" ? "News from the lodge appears here." : "Nothing in this category yet.";
+    $("#moreBtn").hidden = list.length <= shownCount;
+    const cf = $("#charityFeed"); cf.replaceChildren();
+    const ch = posts.filter(p => p.kind==="charity").slice(0,3);
+    ch.forEach(p => cf.append(card(p)));
+    cf.hidden = !ch.length;
+  }
+  fetch("/api/posts").then(r => r.ok ? r.json() : Promise.reject()).then(d => { posts = d.posts || []; renderFeed(); })
+    .catch(() => { $("#feedEmpty").textContent = "News could not load right now. Please refresh the page."; });
+
+  /* enquiry */
+  $("#enquiryForm").addEventListener("submit", async e => {
+    e.preventDefault();
+    const st = $("#eqStatus"); st.className = "status";
+    const name = $("#eqName").value.trim(), email = $("#eqEmail").value.trim();
+    if(!name || !validEmail(email)){ st.className = "status warn"; st.textContent = "Add your name and a valid email address."; return; }
+    $("#eqBtn").disabled = true;
+    try {
+      await post("/api/enquire", {name, email, phone:$("#eqPhone").value.trim(), postcode:$("#eqPostcode").value.trim(),
+        prefers:(document.querySelector('input[name="eqPref"]:checked')||{}).value||"email", message:$("#eqMsg").value.trim(), website:$("#eqWebsite").value});
+      st.className = "status ok"; st.textContent = "Thank you. A member of the lodge will contact you soon.";
+      e.target.reset();
+    } catch(err){ st.className = "status warn"; st.textContent = err.message; $("#eqFallback").hidden = false; }
+    $("#eqBtn").disabled = false;
+  });
+
+  /* newsletter */
+  $("#subForm").addEventListener("submit", async e => {
+    e.preventDefault();
+    const st = $("#subStatus"); st.className = "status";
+    const name = $("#subName").value.trim(), email = $("#subEmail").value.trim();
+    if(!validEmail(email)){ st.className = "status warn"; st.textContent = "Add a valid email address."; return; }
+    $("#subBtn").disabled = true;
+    try {
+      await post("/api/subscribe", {name, email, website:$("#subWebsite").value});
+      st.className = "status ok"; st.textContent = "You are on the list for the next newsletter.";
+      e.target.reset();
+    } catch(err){ st.className = "status warn"; st.textContent = err.message; $("#subFallback").hidden = false; }
+    $("#subBtn").disabled = false;
+  });
+})();
+</script>
+
+</body>
+</html>

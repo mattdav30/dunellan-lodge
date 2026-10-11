@@ -1,0 +1,22 @@
+name = "dunellan-lodge"
+main = "src/worker.js"
+compatibility_date = "2025-09-01"
+workers_dev = true
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+html_handling = "auto-trailing-slash"
+not_found_handling = "404-page"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "dunellan-lodge"
+database_id = "88942636-a13e-4234-8c7c-6f827c3fdc76"
+migrations_dir = "migrations"
+
+[vars]
+ALLOWED_ORIGINS = "https://dunellan-lodge.vercel.app"
+
+[observability]
+enabled = true

@@ -1,0 +1,10 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "https://dunellan-lodge.matthew-davenport30.workers.dev/api/:path*" }
+  ],
+  "headers": [
+    { "source": "/admin", "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }] }
+  ]
+}

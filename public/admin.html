@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Members area · Dunellan Lodge No. 480</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Libre+Franklin:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#f5f6fa;--surface:#fff;--ink:#121829;--muted:#3d4558;--line:#d3d8e4;
+  --lodge:#1b2c5e;--brass:#8a6720;--brass-soft:#f0e7d2;--ok:#2d6a45;--ok-soft:#e3f1e8;--warn:#9a3b12;--warn-soft:#fbe8de;
+  --f-display:"Gloock",Georgia,serif;--f-body:"Libre Franklin","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0d1120;--surface:#151b2e;--ink:#e8ebf3;--muted:#c0c6d6;--line:#2c3454;
+  --lodge:#2a3f80;--brass:#d6b25e;--brass-soft:#26221a;--ok:#7cc59a;--ok-soft:#14261c;--warn:#f0a07a;--warn-soft:#2c1810;color-scheme:dark}}
+*{box-sizing:border-box}
+html{font-size:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1.1875rem;line-height:1.6}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.15;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding-inline:clamp(1rem,4vw,2rem)}
+header{background:var(--lodge);color:#eef1f8}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding-block:1rem}
+header h1{font-size:1.5rem}
+header .who{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;font-size:1rem}
+main{padding-block:2rem 4rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:3rem;padding:.7rem 1.4rem;font:inherit;font-size:1.05rem;font-weight:600;border:2px solid var(--ink);background:var(--ink);color:var(--bg);cursor:pointer;border-radius:0;text-decoration:none}
+.btn:hover{filter:brightness(1.15)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.light{border-color:#eef1f8;background:transparent;color:#eef1f8;min-height:2.6rem;font-size:1rem;padding:.4rem 1rem}
+.btn.danger{background:transparent;color:var(--warn);border-color:var(--warn)}
+.btn.small{min-height:2.6rem;font-size:1rem;padding:.4rem 1rem}
+.btn:disabled{opacity:.5;cursor:wait}
+.card{background:var(--surface);border:1px solid var(--line);padding:clamp(1.25rem,3vw,2rem)}
+.signin{max-width:30rem;margin:3rem auto}
+.signin h2{font-size:2rem;margin-bottom:.3rem}
+.signin p{color:var(--muted);margin:0 0 1.5rem}
+form{display:grid;gap:1.1rem}
+label{display:grid;gap:.35rem;font-weight:600}
+label span.hint{font-weight:400;color:var(--muted);font-size:1rem}
+input,textarea,select{font:inherit;font-size:1.15rem;color:var(--ink);background:var(--bg);border:2px solid var(--line);padding:.7rem .8rem;width:100%;border-radius:0}
+input:focus,textarea:focus,select:focus{border-color:var(--brass);outline:none}
+textarea{min-height:14rem;resize:vertical;line-height:1.6}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr));gap:1.1rem}
+.msg{padding:.8rem 1rem;font-weight:500}
+.msg.ok{background:var(--ok-soft);color:var(--ok)}
+.msg.warn{background:var(--warn-soft);color:var(--warn)}
+nav.tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem;border-bottom:2px solid var(--line)}
+nav.tabs button{font:inherit;font-size:1.1rem;font-weight:600;padding:.8rem 1.1rem;background:none;border:0;border-bottom:4px solid transparent;margin-bottom:-2px;color:var(--muted);cursor:pointer;min-height:3rem}
+nav.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--brass)}
+nav.tabs .count{display:inline-block;min-width:1.6rem;padding:0 .4rem;margin-left:.3rem;background:var(--brass);color:var(--bg);font-size:.9rem;border-radius:999px;text-align:center}
+section[role="tabpanel"]{display:grid;gap:1.5rem}
+section h2{font-size:1.9rem}
+.lead{color:var(--muted);margin:.2rem 0 0}
+.list{display:grid;gap:0;border-top:1px solid var(--line)}
+.item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.5rem 1rem;padding:1rem 0;border-bottom:1px solid var(--line);align-items:start}
+.item h3{font-size:1.35rem}
+.item .meta{color:var(--muted);font-size:1rem}
+.item .actions{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:flex-end}
+.item p{margin:.4rem 0 0;white-space:pre-wrap}
+.item.done{opacity:.6}
+.tag{display:inline-block;font-size:.9rem;font-weight:600;padding:.1rem .5rem;border:1px solid var(--brass);color:var(--brass);margin-right:.4rem}
+.empty{color:var(--muted);padding:1.5rem 0}
+.confirm{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;font-weight:600;color:var(--warn)}
+.toolbar{display:flex;gap:.75rem;flex-wrap:wrap;align-items:center}
+.preview{border:2px dashed var(--line);padding:1.25rem}
+.preview h3{font-size:1.6rem;margin:.3rem 0 .6rem}
+.preview p{margin:0 0 .7rem;color:var(--muted)}
+[hidden]{display:none!important}
+@media (max-width:560px){.item{grid-template-columns:minmax(0,1fr)}.item .actions{justify-content:flex-start}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Dunellan No. 480 · Members area</h1>
+    <div class="who" id="who" hidden><span id="whoName"></span><a class="btn light" href="/">View website</a><button class="btn light" type="button" id="logout">Sign out</button></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- sign in -->
+  <div class="card signin" id="signin" hidden>
+    <h2>Sign in</h2>
+    <p>For lodge officers who post news and manage enquiries.</p>
+    <form id="loginForm" novalidate>
+      <label>Email<input id="loginEmail" type="email" autocomplete="username" required></label>
+      <label>Password<input id="loginPw" type="password" autocomplete="current-password" required></label>
+      <button class="btn" type="submit">Sign in</button>
+      <div class="msg warn" id="loginMsg" role="alert" hidden></div>
+    </form>
+  </div>
+
+  <!-- first sign in: choose a password -->
+  <div class="card signin" id="firstpw" hidden>
+    <h2>Choose your password</h2>
+    <p>You signed in with a temporary password. Please choose your own before you continue.</p>
+    <form id="firstForm" novalidate>
+      <label>Temporary password<input id="fpCur" type="password" autocomplete="current-password" required></label>
+      <label>New password <span class="hint">At least 10 characters. A short phrase is easy to remember.</span><input id="fpNew" type="password" autocomplete="new-password" required></label>
+      <label>Type the new password again<input id="fpNew2" type="password" autocomplete="new-password" required></label>
+      <button class="btn" type="submit">Save password</button>
+      <div class="msg warn" id="fpMsg" role="alert" hidden></div>
+    </form>
+  </div>
+
+  <!-- dashboard -->
+  <div id="dash" hidden>
+    <nav class="tabs" role="tablist" aria-label="Members area">
+      <button role="tab" aria-selected="true" data-tab="post">Post an update</button>
+      <button role="tab" aria-selected="false" data-tab="enquiries">Enquiries <span class="count" id="eqNew" hidden></span></button>
+      <button role="tab" aria-selected="false" data-tab="subs">Newsletter list</button>
+      <button role="tab" aria-selected="false" data-tab="members">Members</button>
+      <button role="tab" aria-selected="false" data-tab="account">My password</button>
+    </nav>
+
+    <section role="tabpanel" id="tab-post">
+      <div>
+        <h2 id="postHeading">Post an update</h2>
+        <p class="lead">Fill in the boxes, check the preview, then press Publish. Your post appears on the website straight away.</p>
+      </div>
+      <div class="card">
+        <form id="postForm" novalidate>
+          <div class="row">
+            <label>Type of post
+              <select id="pKind"><option value="news">News</option><option value="newsletter">Newsletter issue</option><option value="charity">Charity</option></select>
+            </label>
+            <label>Date<input id="pDate" type="date" required></label>
+          </div>
+          <label>Title<input id="pTitle" maxlength="200" required></label>
+          <label>Text <span class="hint">Press Enter twice to start a new paragraph.</span><textarea id="pBody"></textarea></label>
+          <div class="preview" aria-live="polite">
+            <span class="tag" id="pvKind">News</span><span class="meta" id="pvDate"></span>
+            <h3 id="pvTitle">Your title appears here</h3>
+            <div id="pvBody"></div>
+          </div>
+          <div class="toolbar">
+            <button class="btn" type="submit" id="pSave">Publish</button>
+            <button class="btn ghost" type="button" id="pCancel" hidden>Cancel editing</button>
+          </div>
+          <div class="msg" id="pMsg" role="status" hidden></div>
+        </form>
+      </div>
+      <div>
+        <h2>Published posts</h2>
+        <div class="list" id="postList"><p class="empty">Loading…</p></div>
+      </div>
+    </section>
+
+    <section role="tabpanel" id="tab-enquiries" hidden>
+      <div><h2>Enquiries</h2><p class="lead">Men who asked about joining. Mark each one as contacted once someone has been in touch.</p></div>
+      <div class="list" id="eqList"><p class="empty">Loading…</p></div>
+    </section>
+
+    <section role="tabpanel" id="tab-subs" hidden>
+      <div><h2>Newsletter list</h2><p class="lead">Everyone who signed up for the newsletter. Copy the emails into the email program you send the newsletter from.</p></div>
+      <div class="toolbar"><button class="btn" type="button" id="copySubs">Copy all emails</button><button class="btn ghost" type="button" id="csvSubs">Download as spreadsheet</button><span class="msg ok" id="subsMsg" hidden></span></div>
+      <div class="list" id="subList"><p class="empty">Loading…</p></div>
+    </section>
+
+    <section role="tabpanel" id="tab-members" hidden>
+      <div><h2>Members who can post</h2><p class="lead">Give another officer access. Tell him the temporary password in person or by phone. He chooses his own the first time he signs in.</p></div>
+      <div class="card">
+        <form id="addForm" novalidate>
+          <div class="row">
+            <label>Name<input id="aName" maxlength="120"></label>
+            <label>Email<input id="aEmail" type="email" required></label>
+          </div>
+          <label>Temporary password <span class="hint">At least 10 characters.</span><input id="aPw" required></label>
+          <div class="toolbar"><button class="btn" type="submit">Give access</button><button class="btn ghost" type="button" id="aGen">Make one up for me</button></div>
+          <div class="msg" id="aMsg" role="status" hidden></div>
+        </form>
+      </div>
+      <div class="list" id="adminList"></div>
+    </section>
+
+    <section role="tabpanel" id="tab-account" hidden>
+      <div><h2>Change my password</h2></div>
+      <div class="card" style="max-width:32rem">
+        <form id="pwForm" novalidate>
+          <label>Current password<input id="cpCur" type="password" autocomplete="current-password" required></label>
+          <label>New password <span class="hint">At least 10 characters.</span><input id="cpNew" type="password" autocomplete="new-password" required></label>
+          <label>Type the new password again<input id="cpNew2" type="password" autocomplete="new-password" required></label>
+          <button class="btn" type="submit">Change password</button>
+          <div class="msg" id="cpMsg" role="status" hidden></div>
+        </form>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script>
+(function(){
+  const $ = s => document.querySelector(s);
+  const el = (tag, props, ...kids) => { const n = document.createElement(tag); Object.assign(n, props||{}); kids.forEach(k => n.append(k)); return n; };
+  const fmtDate = d => { try { return new Date(d.length === 10 ? d + "T00:00:00" : d).toLocaleDateString("en-AU",{day:"numeric",month:"long",year:"numeric"}); } catch(e){ return d; } };
+  const today = () => { const n = new Date(); n.setMinutes(n.getMinutes()-n.getTimezoneOffset()); return n.toISOString().slice(0,10); };
+  const kindName = k => k === "newsletter" ? "Newsletter" : k === "charity" ? "Charity" : "News";
+
+  async function api(path, opts = {}) {
+    const res = await fetch(path, { method: opts.method || "GET", headers: opts.body ? {"content-type":"application/json"} : {}, body: opts.body ? JSON.stringify(opts.body) : undefined, credentials: "same-origin" });
+    let data = {}; try { data = await res.json(); } catch(e){}
+    if (res.status === 401 && path !== "/api/login" && path !== "/api/password") { showSignin("Your session ended. Please sign in again."); throw new Error("signed out"); }
+    if (!res.ok) throw new Error(data.error || "Something went wrong. Please try again.");
+    return data;
+  }
+  function say(box, text, kind){ box.textContent = text; box.className = "msg " + (kind || "ok"); box.hidden = !text; }
+
+  function showSignin(note){
+    $("#dash").hidden = true; $("#firstpw").hidden = true; $("#who").hidden = true; $("#signin").hidden = false;
+    if (note) say($("#loginMsg"), note, "warn");
+    $("#loginEmail").focus();
+  }
+  async function boot(){
+    try {
+      const me = await fetch("/api/me", {credentials:"same-origin"});
+      if (!me.ok) return showSignin();
+      const data = await me.json();
+      $("#signin").hidden = true; $("#who").hidden = false; $("#whoName").textContent = data.name || data.email;
+      if (data.mustChange){ $("#firstpw").hidden = false; $("#dash").hidden = true; $("#fpCur").focus(); return; }
+      $("#firstpw").hidden = true; $("#dash").hidden = false;
+      loadPosts(); loadEnquiries(); loadSubs(); loadAdmins();
+    } catch(e){ showSignin("We could not reach the website. Check your internet connection and refresh the page."); }
+  }
+
+  /* sign in and out */
+  $("#loginForm").addEventListener("submit", async e => {
+    e.preventDefault(); const btn = e.submitter; btn.disabled = true; $("#loginMsg").hidden = true;
+    try { await api("/api/login", {method:"POST", body:{email:$("#loginEmail").value, password:$("#loginPw").value}}); $("#loginPw").value = ""; await boot(); }
+    catch(err){ say($("#loginMsg"), err.message, "warn"); }
+    btn.disabled = false;
+  });
+  $("#logout").addEventListener("click", async () => { try { await api("/api/logout", {method:"POST"}); } catch(e){} showSignin(); });
+
+  async function changePw(cur, a, b, box){
+    if (a !== b){ say(box, "The two new passwords are different. Please type them again.", "warn"); return false; }
+    if (a.length < 10){ say(box, "Choose a password of at least 10 characters.", "warn"); return false; }
+    try { await api("/api/password", {method:"POST", body:{currentPassword:cur, newPassword:a}}); return true; }
+    catch(err){ say(box, err.message, "warn"); return false; }
+  }
+  $("#firstForm").addEventListener("submit", async e => {
+    e.preventDefault();
+    if (await changePw($("#fpCur").value, $("#fpNew").value, $("#fpNew2").value, $("#fpMsg"))) { e.target.reset(); boot(); }
+  });
+  $("#pwForm").addEventListener("submit", async e => {
+    e.preventDefault();
+    if (await changePw($("#cpCur").value, $("#cpNew").value, $("#cpNew2").value, $("#cpMsg"))) { e.target.reset(); say($("#cpMsg"), "Password changed."); }
+  });
+
+  /* tabs */
+  document.querySelectorAll('[role="tab"]').forEach(t => t.addEventListener("click", () => {
+    document.querySelectorAll('[role="tab"]').forEach(x => x.setAttribute("aria-selected", String(x === t)));
+    document.querySelectorAll('[role="tabpanel"]').forEach(p => p.hidden = p.id !== "tab-" + t.dataset.tab);
+  }));
+
+  /* posts */
+  let editing = null, posts = [];
+  $("#pDate").value = today();
+  function preview(){
+    $("#pvKind").textContent = kindName($("#pKind").value);
+    $("#pvDate").textContent = $("#pDate").value ? fmtDate($("#pDate").value) : "";
+    $("#pvTitle").textContent = $("#pTitle").value.trim() || "Your title appears here";
+    const body = $("#pvBody"); body.replaceChildren();
+    $("#pBody").value.split(/\n\s*\n/).forEach(par => { if (par.trim()) body.append(el("p", {textContent: par.trim()})); });
+  }
+  ["pKind","pDate","pTitle","pBody"].forEach(id => $("#"+id).addEventListener("input", preview));
+  preview();
+
+  function resetPost(){
+    editing = null; $("#postForm").reset(); $("#pDate").value = today();
+    $("#postHeading").textContent = "Post an update"; $("#pSave").textContent = "Publish"; $("#pCancel").hidden = true; preview();
+  }
+  $("#pCancel").addEventListener("click", () => { resetPost(); $("#pMsg").hidden = true; });
+  $("#postForm").addEventListener("submit", async e => {
+    e.preventDefault(); const btn = $("#pSave"); btn.disabled = true;
+    const body = {title:$("#pTitle").value, body:$("#pBody").value, kind:$("#pKind").value, date:$("#pDate").value};
+    try {
+      if (editing) await api("/api/posts/" + editing, {method:"PUT", body}); else await api("/api/posts", {method:"POST", body});
+      say($("#pMsg"), editing ? "Changes saved. The website now shows the updated post." : "Published. Your post is now on the website.");
+      resetPost(); loadPosts();
+    } catch(err){ if (err.message !== "signed out") say($("#pMsg"), err.message, "warn"); }
+    btn.disabled = false;
+  });
+
+  function confirmRow(actions, label, onYes){
+    const orig = Array.from(actions.childNodes);
+    const yes = el("button", {className:"btn danger small", type:"button", textContent:"Yes, " + label.toLowerCase()});
+    const no = el("button", {className:"btn ghost small", type:"button", textContent:"Keep it"});
+    const box = el("div", {className:"confirm"}, "Are you sure? ", yes, no);
+    actions.replaceChildren(box);
+    no.addEventListener("click", () => actions.replaceChildren(...orig));
+    yes.addEventListener("click", async () => { yes.disabled = true; try { await onYes(); } catch(err){ if (err.message !== "signed out") { box.textContent = err.message; setTimeout(() => actions.replaceChildren(...orig), 3000); } } });
+  }
+
+  async function loadPosts(){
+    try { posts = (await api("/api/posts")).posts; } catch(e){ return; }
+    const list = $("#postList"); list.replaceChildren();
+    if (!posts.length) { list.append(el("p", {className:"empty", textContent:"Nothing posted yet."})); return; }
+    posts.forEach(p => {
+      const actions = el("div", {className:"actions"});
+      const edit = el("button", {className:"btn ghost small", type:"button", textContent:"Edit"});
+      const del = el("button", {className:"btn danger small", type:"button", textContent:"Delete"});
+      actions.append(edit, del);
+      edit.addEventListener("click", () => {
+        editing = p.id; $("#pKind").value = p.kind; $("#pDate").value = p.date; $("#pTitle").value = p.title; $("#pBody").value = p.body;
+        $("#postHeading").textContent = "Edit post"; $("#pSave").textContent = "Save changes"; $("#pCancel").hidden = false; preview();
+        $("#pMsg").hidden = true; $("#postHeading").scrollIntoView({behavior:"smooth"}); $("#pTitle").focus({preventScroll:true});
+      });
+      del.addEventListener("click", () => confirmRow(actions, "Delete", async () => { await api("/api/posts/" + p.id, {method:"DELETE"}); if (editing === p.id) resetPost(); loadPosts(); }));
+      list.append(el("div", {className:"item"},
+        el("div", {}, el("span", {className:"tag", textContent:kindName(p.kind)}), el("span", {className:"meta", textContent:fmtDate(p.date)}), el("h3", {textContent:p.title})),
+        actions));
+    });
+  }
+
+  /* enquiries */
+  async function loadEnquiries(){
+    let rows; try { rows = (await api("/api/enquiries")).enquiries; } catch(e){ return; }
+    const fresh = rows.filter(r => !r.handled).length;
+    $("#eqNew").hidden = !fresh; $("#eqNew").textContent = fresh;
+    const list = $("#eqList"); list.replaceChildren();
+    if (!rows.length) { list.append(el("p", {className:"empty", textContent:"No enquiries yet. New ones appear here as soon as someone sends the form."})); return; }
+    rows.forEach(r => {
+      const actions = el("div", {className:"actions"});
+      const mark = el("button", {className:"btn ghost small", type:"button", textContent: r.handled ? "Mark as new" : "Mark as contacted"});
+      const del = el("button", {className:"btn danger small", type:"button", textContent:"Delete"});
+      actions.append(mark, del);
+      mark.addEventListener("click", async () => { mark.disabled = true; try { await api("/api/enquiries/" + r.id, {method:"PATCH", body:{handled: !r.handled}}); loadEnquiries(); } catch(e){ mark.disabled = false; } });
+      del.addEventListener("click", () => confirmRow(actions, "Delete", async () => { await api("/api/enquiries/" + r.id, {method:"DELETE"}); loadEnquiries(); }));
+      const details = [r.email, r.phone, r.postcode ? "Postcode " + r.postcode : "", "Prefers " + r.prefers].filter(Boolean).join(" · ");
+      const info = el("div", {},
+        el("span", {className:"tag", textContent: r.handled ? "Contacted" : "New"}), el("span", {className:"meta", textContent: fmtDate(r.created_at)}),
+        el("h3", {textContent:r.name}), el("div", {className:"meta", textContent:details}));
+      if (r.message) info.append(el("p", {textContent:r.message}));
+      list.append(el("div", {className:"item" + (r.handled ? " done" : "")}, info, actions));
+    });
+  }
+
+  /* newsletter list */
+  let subs = [];
+  async function loadSubs(){
+    try { subs = (await api("/api/subscribers")).subscribers; } catch(e){ return; }
+    const list = $("#subList"); list.replaceChildren();
+    if (!subs.length) { list.append(el("p", {className:"empty", textContent:"No one has signed up yet."})); return; }
+    subs.forEach(s => {
+      const actions = el("div", {className:"actions"});
+      const del = el("button", {className:"btn danger small", type:"button", textContent:"Remove"});
+      actions.append(del);
+      del.addEventListener("click", () => confirmRow(actions, "Remove", async () => { await api("/api/subscribers/" + encodeURIComponent(s.email), {method:"DELETE"}); loadSubs(); }));
+      list.append(el("div", {className:"item"}, el("div", {}, el("h3", {textContent:s.email}), el("div", {className:"meta", textContent:(s.name ? s.name + " · " : "") + "Joined " + fmtDate(s.created_at)})), actions));
+    });
+  }
+  $("#copySubs").addEventListener("click", async () => {
+    const text = subs.map(s => s.email).join(", ");
+    try { await navigator.clipboard.writeText(text); say($("#subsMsg"), subs.length + " emails copied. Paste them into the Bcc box of your email."); }
+    catch(e){ say($("#subsMsg"), "Copy did not work in this browser. Use Download as spreadsheet instead.", "warn"); }
+  });
+  $("#csvSubs").addEventListener("click", () => {
+    const q = v => '"' + String(v).replace(/"/g,'""') + '"';
+    const csv = "Email,Name,Joined\n" + subs.map(s => [s.email, s.name, s.created_at.slice(0,10)].map(q).join(",")).join("\n");
+    const a = el("a", {href: URL.createObjectURL(new Blob([csv], {type:"text/csv"})), download: "dunellan-newsletter-list.csv"});
+    document.body.append(a); a.click(); a.remove();
+  });
+
+  /* members */
+  async function loadAdmins(){
+    let data; try { data = await api("/api/admins"); } catch(e){ return; }
+    const list = $("#adminList"); list.replaceChildren();
+    data.admins.forEach(a => {
+      const actions = el("div", {className:"actions"});
+      if (a.email !== data.me) {
+        const del = el("button", {className:"btn danger small", type:"button", textContent:"Remove access"});
+        actions.append(del);
+        del.addEventListener("click", () => confirmRow(actions, "Remove", async () => { await api("/api/admins/" + encodeURIComponent(a.email), {method:"DELETE"}); loadAdmins(); }));
+      } else actions.append(el("span", {className:"meta", textContent:"This is you"}));
+      list.append(el("div", {className:"item"}, el("div", {}, el("h3", {textContent:a.name || a.email}), el("div", {className:"meta", textContent:a.email})), actions));
+    });
+  }
+  $("#aGen").addEventListener("click", () => {
+    const w = ["Ashlar","Square","Level","Gavel","Plumb","Trowel","Compass","Pillar"], r = n => crypto.getRandomValues(new Uint32Array(1))[0] % n;
+    $("#aPw").value = w[r(8)] + "-" + w[r(8)] + "-" + (1000 + r(9000));
+  });
+  $("#addForm").addEventListener("submit", async e => {
+    e.preventDefault();
+    try {
+      await api("/api/admins", {method:"POST", body:{name:$("#aName").value, email:$("#aEmail").value, password:$("#aPw").value}});
+      say($("#aMsg"), "Access given. Send him to this page with his email and the temporary password " + $("#aPw").value + ".");
+      e.target.reset(); loadAdmins();
+    } catch(err){ if (err.message !== "signed out") say($("#aMsg"), err.message, "warn"); }
+  });
+
+  boot();
+})();
+</script>
+</body>
+</html>
