@@ -332,7 +332,7 @@ section h2{font-size:1.9rem}
       actions.append(mark, del);
       mark.addEventListener("click", async () => { mark.disabled = true; try { await api("/api/enquiries/" + r.id, {method:"PATCH", body:{handled: !r.handled}}); loadEnquiries(); } catch(e){ mark.disabled = false; } });
       del.addEventListener("click", () => confirmRow(actions, "Delete", async () => { await api("/api/enquiries/" + r.id, {method:"DELETE"}); loadEnquiries(); }));
-      const details = [r.email, r.phone, r.postcode ? "Postcode " + r.postcode : "", "Prefers " + r.prefers].filter(Boolean).join(" · ");
+      const details = [r.email, r.phone, r.postcode ? "Postcode " + r.postcode : ""].filter(Boolean).join(" · ");
       const info = el("div", {},
         el("span", {className:"tag", textContent: r.handled ? "Contacted" : "New"}), el("span", {className:"meta", textContent: fmtDate(r.created_at)}),
         el("h3", {textContent:r.name}), el("div", {className:"meta", textContent:details}));

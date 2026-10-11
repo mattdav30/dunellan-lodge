@@ -518,6 +518,18 @@ h1 em,h2 em{font-style:normal}
 .contact-list .copyline{margin:0}
 @media (max-width:860px){.meet-grid,.touch{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:480px){.contact-list div{grid-template-columns:minmax(0,1fr);gap:.1rem}}
+
+/* join section, simplified */
+.jsteps{list-style:none;margin:0 0 2.5rem;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.25rem;counter-reset:js}
+.jsteps li{counter-increment:js;display:grid;gap:.25rem;border-top:2px solid var(--brass);padding-top:.9rem;min-width:0}
+.jsteps li::before{content:counter(js);font-family:var(--f-display);font-size:1.6rem;line-height:1;color:var(--brass)}
+.jsteps b{font-size:1.2rem}
+.jsteps span{color:var(--muted)}
+.join2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(2rem,5vw,4rem);align-items:start}
+.join2 .criteria{margin-top:.6rem}
+.join-note{margin-top:1.25rem;color:var(--muted)}
+@media (max-width:860px){.jsteps{grid-template-columns:repeat(2,minmax(0,1fr))}.join2{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:480px){.jsteps{grid-template-columns:minmax(0,1fr)}}
 </style>
 </head>
 <body>
@@ -706,48 +718,34 @@ h1 em,h2 em{font-style:normal}
     </div>
   </section>
 
-  <section id="join" class="light">
+  <section id="join" class="light sec">
     <div class="wrap">
       <div class="sec-head rv">
         <h2>How to join</h2>
-        <p>Joining is a big commitment, so the first step is a friendly chat to see whether Freemasonry suits you.</p>
+        <p>It starts with a friendly chat to see whether Freemasonry suits you.</p>
       </div>
-      <div class="join">
-        <div class="rv">
-          <ol class="steps">
-            <li><div><b>Get in touch</b><span>Fill in the form on this page or email our Secretary.</span></div></li>
-            <li><div><b>Meet us</b><span>Come along to a Festive Board or social event.</span></div></li>
-            <li><div><b>Apply</b><span>A Freemason nominates you. If you know none, the lodge will find a nominator for you. You also supply a National Police Check. Select "volunteer" when you order, as some providers charge less.</span></div></li>
-            <li><div><b>Initiation</b><span>The lodge welcomes you as an Entered Apprentice.</span></div></li>
-          </ol>
-          <div class="req">
-            <h3>Who can join</h3>
-            <dl class="criteria">
-              <div><dt>Age</dt><dd>Men over the age of 18</dd></div>
-              <div><dt>Character</dt><dd>Honest, law abiding and of good character</dd></div>
-              <div><dt>Belief</dt><dd>In a Supreme Being, of any faith</dd></div>
-            </dl>
-          </div>
-          <div class="commit">
-            <h3>What it asks of you</h3>
-            <p>One lodge meeting a month, usually an evening of a few hours. For meetings you wear a dinner suit, white shirt and black bow tie. There is a joining fee and yearly dues. Ask the Secretary for current amounts.</p>
-          </div>
+      <ol class="jsteps rv">
+        <li><b>Get in touch</b><span>Use the form below or email our Secretary.</span></li>
+        <li><b>Meet us</b><span>Join us at a Festive Board or social event.</span></li>
+        <li><b>Apply</b><span>A member nominates you and you provide a police check.</span></li>
+        <li><b>Initiation</b><span>The lodge welcomes you as a new member.</span></li>
+      </ol>
+      <div class="join2">
+        <div class="petition rv">
+          <h3>Who can join</h3>
+          <dl class="criteria">
+            <div><dt>Age</dt><dd>Men over the age of 18</dd></div>
+            <div><dt>Character</dt><dd>Honest, law abiding and of good character</dd></div>
+            <div><dt>Belief</dt><dd>In a Supreme Being, of any faith</dd></div>
+          </dl>
+          <p class="join-note">Expect one lodge meeting a month, plus a joining fee and yearly dues. The Secretary will explain the details.</p>
         </div>
         <div class="petition rv" id="enquire">
           <h3>Start a conversation</h3>
-          <p>A member of the lodge will contact you.</p>
           <form id="enquiryForm" novalidate>
             <div class="field"><label for="eqName">Your name</label><input id="eqName" autocomplete="name" required></div>
             <div class="field"><label for="eqEmail">Email</label><input id="eqEmail" type="email" autocomplete="email" required></div>
-            <div class="row2">
-              <div class="field"><label for="eqPhone">Phone</label><input id="eqPhone" type="tel" autocomplete="tel"></div>
-              <div class="field"><label for="eqPostcode">Postcode</label><input id="eqPostcode" inputmode="numeric" autocomplete="postal-code" maxlength="4"></div>
-            </div>
-            <fieldset class="field pref">
-              <legend>Best way to reach you</legend>
-              <label><input type="radio" name="eqPref" value="phone" id="eqPrefPhone"> Phone</label>
-              <label><input type="radio" name="eqPref" value="email" id="eqPrefEmail" checked> Email</label>
-            </fieldset>
+            <div class="field"><label for="eqPhone">Phone (optional)</label><input id="eqPhone" type="tel" autocomplete="tel"></div>
             <div class="field"><label for="eqMsg">Any questions? (optional)</label><textarea id="eqMsg"></textarea></div>
             <div class="hp" aria-hidden="true"><label>Leave this empty<input id="eqWebsite" tabindex="-1" autocomplete="off"></label></div>
             <button class="btn" type="submit" id="eqBtn">Send</button>
@@ -1334,8 +1332,7 @@ h1 em,h2 em{font-style:normal}
     if(!name || !validEmail(email)){ st.className = "status warn"; st.textContent = "Add your name and a valid email address."; return; }
     $("#eqBtn").disabled = true;
     try {
-      await post("/api/enquire", {name, email, phone:$("#eqPhone").value.trim(), postcode:$("#eqPostcode").value.trim(),
-        prefers:(document.querySelector('input[name="eqPref"]:checked')||{}).value||"email", message:$("#eqMsg").value.trim(), website:$("#eqWebsite").value});
+      await post("/api/enquire", {name, email, phone:$("#eqPhone").value.trim(), message:$("#eqMsg").value.trim(), website:$("#eqWebsite").value});
       st.className = "status ok"; st.textContent = "Thank you. A member of the lodge will contact you soon.";
       e.target.reset();
     } catch(err){ st.className = "status warn"; st.textContent = err.message; $("#eqFallback").hidden = false; }
