@@ -535,6 +535,10 @@ h1 em,h2 em{font-style:normal}
 .c-gain .yr{font-size:clamp(2.6rem,7.5vw,6rem);line-height:1.05}
 .c-gain .eras{height:clamp(14rem,36vh,19rem)}
 .c-end p{margin-inline:auto}
+
+.journey{height:1200vh}
+@media (max-width:640px){.journey{height:1000vh}}
+@media (prefers-reduced-motion:reduce){.journey{height:auto}}
 </style>
 </head>
 <body>
@@ -567,7 +571,7 @@ h1 em,h2 em{font-style:normal}
       <canvas id="scene" aria-hidden="true"></canvas>
       <div class="vignette" aria-hidden="true"></div>
 
-      <div class="chapter c-title on" data-a="0" data-b="0.07" data-first data-name="Welcome">
+      <div class="chapter c-title on" data-a="0" data-b="0.06" data-first data-name="Welcome">
         <div class="wrap">
           <div class="eyebrow">Lodge No. 480 · Sinnamon Park, Brisbane</div>
           <h1>Dunellan <em>Lodge</em></h1>
@@ -578,7 +582,7 @@ h1 em,h2 em{font-style:normal}
         </div>
       </div>
 
-      <div class="chapter c-mid" data-a="0.08" data-b="0.17" data-name="Brotherhood">
+      <div class="chapter c-mid" data-a="0.07" data-b="0.14" data-name="Brotherhood">
         <div class="wrap"><div class="ch-box">
           <div class="bignum"><span data-scrollcount="6000000">0</span>+</div>
           <h2>Freemasons worldwide</h2>
@@ -586,7 +590,7 @@ h1 em,h2 em{font-style:normal}
         </div></div>
       </div>
 
-      <div class="chapter c-history c-seq c-gain" data-a="0.19" data-b="0.44" data-name="Why join">
+      <div class="chapter c-history c-seq c-gain" data-a="0.16" data-b="0.38" data-name="Why join">
         <div class="wrap hist">
           <div class="hist-main">
             <span class="eyebrow">Why men join</span>
@@ -605,7 +609,7 @@ h1 em,h2 em{font-style:normal}
         </div>
       </div>
 
-      <div class="chapter c-mid c-right" data-a="0.46" data-b="0.54" data-name="Values">
+      <div class="chapter c-mid c-right" data-a="0.4" data-b="0.47" data-name="Values">
         <div class="wrap"><div class="ch-box">
           <h2>What we stand for</h2>
           <ul class="chips">
@@ -615,7 +619,7 @@ h1 em,h2 em{font-style:normal}
         </div></div>
       </div>
 
-      <div class="chapter c-names" data-a="0.56" data-b="0.66" data-name="Famous brethren">
+      <div class="chapter c-names" data-a="0.49" data-b="0.58" data-name="Famous brethren">
         <div class="names-wrap">
           <div class="wrap"><h2>In good company</h2></div>
           <div class="mgroup">
@@ -629,25 +633,30 @@ h1 em,h2 em{font-style:normal}
         </div>
       </div>
 
-      <div class="chapter c-history c-seq" data-a="0.68" data-b="0.84" data-name="History">
+      <div class="chapter c-history c-seq" data-a="0.6" data-b="0.85" data-name="History">
         <div class="wrap hist">
           <div class="hist-main">
             <span class="eyebrow">Our history</span>
             <div class="eras">
               <div class="era"><span class="yr">Middle Ages</span><p>Stonemasons gather in guilds to share their craft, bound by oaths to uphold moral codes.</p></div>
-              <div class="era"><span class="yr">1717</span><p>Four London lodges form the first Grand Lodge.</p></div>
-              <div class="era"><span class="yr">1859</span><p>Queensland's first recorded Masonic meeting, in Albert Street, Brisbane.</p></div>
-              <div class="era"><span class="yr">1959</span><p>Dunellan Lodge No. 480 is consecrated on 29 September.</p></div>
+              <div class="era"><span class="yr">Late 1600s</span><p>As the stonemasons' guilds decline, speculative Freemasonry takes shape in Scotland, Ireland and England.</p></div>
+              <div class="era"><span class="yr">1717</span><p>Four London lodges form the first Grand Lodge on 24 June.</p></div>
+              <div class="era"><span class="yr">1730s</span><p>Freemasonry spreads through Europe and North America.</p></div>
+              <div class="era"><span class="yr">Early 1800s</span><p>Freemasonry reaches the Australian colonies.</p></div>
+              <div class="era"><span class="yr">1859</span><p>North Australian Lodge holds Queensland's first recorded Masonic meeting, in Albert Street, Brisbane, the year Queensland is founded.</p></div>
+              <div class="era"><span class="yr">1921</span><p>Queensland's lodges unite as the United Grand Lodge of Queensland.</p></div>
+              <div class="era"><span class="yr">1959</span><p>Dunellan Lodge No. 480 is consecrated on 29 September and holds its first meeting on 22 October.</p></div>
+              <div class="era"><span class="yr">2019</span><p>Dunellan celebrates sixty years of meetings.</p></div>
               <div class="era"><span class="yr">Today</span><p>Dunellan meets at Sinnamon Park, with brethren from Brisbane to the Gold Coast, Canberra and Chile.</p></div>
             </div>
           </div>
           <ol class="rail" aria-hidden="true">
-            <li>Middle Ages</li><li>1717</li><li>1859</li><li>1959</li><li>Today</li>
+            <li>Middle Ages</li><li>Late 1600s</li><li>1717</li><li>1730s</li><li>Early 1800s</li><li>1859</li><li>1921</li><li>1959</li><li>2019</li><li>Today</li>
           </ol>
         </div>
       </div>
 
-      <div class="chapter c-end" data-a="0.87" data-b="1" data-last data-name="Join us">
+      <div class="chapter c-end" data-a="0.88" data-b="1" data-last data-name="Join us">
         <div class="wrap">
           <h2>Your journey starts here</h2>
           <p>Open to men over 18 of good character who believe in a Supreme Being, of any faith.</p>
